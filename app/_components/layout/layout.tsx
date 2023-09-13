@@ -7,6 +7,7 @@ import React, { useEffect } from "react";
 import Header from "../header/header";
 import Head from "next/head";
 import Sidebar from "../sidebar/sidebar";
+import Explorer from "@/app/_components/explorer/explorer";
 
 export default function Layout({
   children,
@@ -31,6 +32,7 @@ export default function Layout({
         <Header />
         <div className={styles.bodyWrapper}>
           <Sidebar />
+          <Explorer />
           <div className={styles.children}>{children}</div>
         </div>
       </body>
