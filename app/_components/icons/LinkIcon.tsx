@@ -1,4 +1,6 @@
-const LinkIcon = (props) => {
+import { SVGProps } from "react";
+
+const LinkIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       aria-hidden="true"

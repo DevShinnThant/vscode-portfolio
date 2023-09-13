@@ -1,4 +1,6 @@
-const SettingsIcon = (props) => {
+import { SVGProps } from "react";
+
+const SettingsIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width={24}

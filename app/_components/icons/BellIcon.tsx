@@ -1,4 +1,6 @@
-const BellIcon = (props) => {
+import { SVGProps } from "react";
+
+const BellIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width={14}

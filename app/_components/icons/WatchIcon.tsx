@@ -1,4 +1,6 @@
-const WatchIcon = (props) => {
+import { SVGProps } from "react";
+
+const WatchIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       aria-hidden="true"

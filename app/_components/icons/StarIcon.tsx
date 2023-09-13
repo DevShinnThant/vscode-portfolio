@@ -1,4 +1,6 @@
-const StarIcon = (props) => {
+import { SVGProps } from "react";
+
+const StarIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       aria-hidden="true"

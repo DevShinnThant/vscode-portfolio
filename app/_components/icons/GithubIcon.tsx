@@ -1,4 +1,6 @@
-const GithubIcon = (props) => {
+import { SVGProps } from "react";
+
+const GithubIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width={24}

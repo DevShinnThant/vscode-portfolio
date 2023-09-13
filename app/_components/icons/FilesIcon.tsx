@@ -1,4 +1,6 @@
-const FilesIcon = (props) => {
+import { SVGProps } from "react";
+
+const FilesIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width={24}

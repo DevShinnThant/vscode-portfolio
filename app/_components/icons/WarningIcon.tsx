@@ -1,4 +1,6 @@
-const WarningIcon = (props) => {
+import { SVGProps } from "react";
+
+const WarningIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width={14}

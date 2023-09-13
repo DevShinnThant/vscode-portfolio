@@ -1,9 +1,9 @@
+import Layout from "./_components/layout/layout";
 import "./styles/globals.css";
 import "./styles/theme.css";
 
 import type { Metadata } from "next";
 import { Source_Sans_3 } from "next/font/google";
-import Layout from "./_components/layout";
 
 const SourceSans3 = Source_Sans_3({ subsets: ["latin"] });
 

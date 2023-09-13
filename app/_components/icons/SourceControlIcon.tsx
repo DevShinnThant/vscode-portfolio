@@ -1,4 +1,6 @@
-const SourceControlIcon = (props) => {
+import { SVGProps } from "react";
+
+const SourceControlIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width={14}

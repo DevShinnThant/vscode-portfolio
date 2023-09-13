@@ -1,4 +1,6 @@
-const CommentIcon = (props) => {
+import { SVGProps } from "react";
+
+const CommentIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       fill="currentColor"

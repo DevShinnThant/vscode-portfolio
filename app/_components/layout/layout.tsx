@@ -1,9 +1,12 @@
 "use client";
 
+import styles from "./layout.module.css";
 import { NextFont } from "next/dist/compiled/@next/font";
+
 import React, { useEffect } from "react";
 import Header from "../header/header";
 import Head from "next/head";
+import Sidebar from "../sidebar/sidebar";
 
 export default function Layout({
   children,
@@ -26,7 +29,10 @@ export default function Layout({
       <CustomHead />
       <body className={font.className}>
         <Header />
-        {children}
+        <div className={styles.bodyWrapper}>
+          <Sidebar />
+          <div className={styles.children}>{children}</div>
+        </div>
       </body>
     </html>
   );

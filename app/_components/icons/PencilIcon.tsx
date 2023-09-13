@@ -1,4 +1,6 @@
-const PencilIcon = (props) => {
+import { SVGProps } from "react";
+
+const PencilIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width={16}

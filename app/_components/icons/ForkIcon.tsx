@@ -1,4 +1,6 @@
-const ForkIcon = (props) => {
+import { SVGProps } from "react";
+
+const ForkIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       aria-hidden="true"

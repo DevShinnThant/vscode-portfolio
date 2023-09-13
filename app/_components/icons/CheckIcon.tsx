@@ -1,4 +1,6 @@
-const CheckIcon = (props) => {
+import { SVGProps } from "react";
+
+const CheckIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width={16}

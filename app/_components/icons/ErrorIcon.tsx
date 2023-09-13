@@ -1,4 +1,6 @@
-const ErrorIcon = (props) => {
+import { SVGProps } from "react";
+
+const ErrorIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width={14}

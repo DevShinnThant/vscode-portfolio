@@ -1,4 +1,6 @@
-const AccountIcon = (props) => {
+import { SVGProps } from "react";
+
+const AccountIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width={16}

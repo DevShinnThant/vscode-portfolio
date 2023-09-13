@@ -1,4 +1,6 @@
-const NextjsIcon = (props) => {
+import { SVGProps } from "react";
+
+const NextjsIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width={14}

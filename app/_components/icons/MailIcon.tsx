@@ -1,4 +1,6 @@
-const ChevronRight = (props) => {
+import { SVGProps } from "react";
+
+const MailIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width={16}
@@ -11,10 +13,10 @@ const ChevronRight = (props) => {
       <path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M10.072 8.024L5.715 3.667l.618-.62L11 7.716v.618L6.333 13l-.618-.619 4.357-4.357z"
+        d="M1 3.5l.5-.5h13l.5.5v9l-.5.5h-13l-.5-.5v-9zm1 1.035V12h12V4.536L8.31 8.9H7.7L2 4.535zM13.03 4H2.97L8 7.869 13.03 4z"
       />
     </svg>
   );
 };
 
-export default ChevronRight;
+export default MailIcon;

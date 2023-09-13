@@ -1,0 +1,11 @@
+.bodyWrapper {
+  width: 100%;
+  height: calc(100% - 20px);
+  display: flex;
+  align-items: center;
+}
+
+.children {
+  padding: 10px;
+  height: 100%;
+}
