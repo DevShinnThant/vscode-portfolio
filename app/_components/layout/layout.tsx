@@ -9,6 +9,7 @@ import Head from "next/head";
 import Sidebar from "../sidebar/sidebar";
 import Explorer from "@/app/_components/explorer/explorer";
 import BottomBar from "../bottom-bar/bottomBar";
+import TabBar from "../tab-bar/tabBar";
 
 export default function Layout({
   children,
@@ -34,7 +35,10 @@ export default function Layout({
         <div className={styles.bodyWrapper}>
           <Sidebar />
           <Explorer />
-          <div className={styles.children}>{children}</div>
+          <div className={styles.children}>
+            <TabBar />
+            <div className={styles.childrenWrapper}>{children}</div>
+          </div>
         </div>
         <BottomBar />
       </body>

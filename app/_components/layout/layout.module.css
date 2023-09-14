@@ -6,6 +6,14 @@
 }
 
 .children {
-  padding: 10px;
+  width: 100%;
+  position: relative;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.childrenWrapper {
+  margin-top: 36px;
+  padding: 10px;
 }

@@ -1,0 +1,26 @@
+.parent {
+  width: 144px;
+  height: 100%;
+  background-color: var(--tab-bg);
+  padding: 0.5rem 1.25rem;
+  background: var(--tab-bg);
+  color: #ececec;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid var(--tab-border);
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.parent.active {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.parent:hover {
+  background-color: var(--tab-bg-hover);
+}
+
+.parent p {
+  margin-left: 8px;
+}
