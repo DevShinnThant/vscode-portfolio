@@ -8,6 +8,7 @@ import Header from "../header/header";
 import Head from "next/head";
 import Sidebar from "../sidebar/sidebar";
 import Explorer from "@/app/_components/explorer/explorer";
+import BottomBar from "../bottom-bar/bottomBar";
 
 export default function Layout({
   children,
@@ -35,6 +36,7 @@ export default function Layout({
           <Explorer />
           <div className={styles.children}>{children}</div>
         </div>
+        <BottomBar />
       </body>
     </html>
   );

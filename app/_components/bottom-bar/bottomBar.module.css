@@ -1,0 +1,54 @@
+.parent {
+  background: var(--bottombar-bg);
+  height: 25px;
+  border-top: 1px solid var(--bottombar-border);
+  color: rgb(225, 228, 232);
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.itemsContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.section {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+  align-items: center;
+  padding: 0 0.2rem;
+  cursor: pointer;
+}
+
+.section p {
+  margin-top: 5px;
+}
+
+.section svg:nth-child(3) {
+  margin-left: 10px;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.link {
+  height: 100%;
+  display: flex;
+  margin-right: 0.5rem;
+  height: 24px;
+  align-items: center;
+  padding: 0 0.2rem;
+  cursor: pointer;
+}
+
+.link p {
+  margin-top: 5px;
+}

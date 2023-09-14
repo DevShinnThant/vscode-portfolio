@@ -29,7 +29,7 @@
 .iconContainer {
   cursor: pointer;
   width: 100%;
-  /* background-color: red; */
+  border-left: 2px solid transparent;
 }
 
 .iconContainer.active {
