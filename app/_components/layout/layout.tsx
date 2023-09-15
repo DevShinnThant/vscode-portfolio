@@ -26,11 +26,11 @@ export default function Layout({
   useEffect(() => {
     if (localStorage.getItem("theme")) {
       document.documentElement.setAttribute(
-        "theme",
+        "data-theme",
         localStorage.getItem("theme") || ""
       );
     }
-  }, []);
+  }, [openedThemeBar]);
 
   return (
     <html lang="en">

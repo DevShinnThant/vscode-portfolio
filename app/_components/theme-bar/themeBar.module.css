@@ -2,11 +2,89 @@
   width: 100%;
   height: 30px;
   background-color: var(--titlebar-bg);
-  padding: 0 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   font-size: 0.85rem;
   border-bottom: 1px solid #191d20;
+  padding: 4px 0px;
+}
+
+.container {
+  width: 40%;
+  margin: 4px 0;
+}
+
+.input {
+  width: 100%;
+  background-color: var(--sidebar-bg);
+  border: 1px solid gray;
+  padding: 2px 8px;
+  color: white;
+  border-radius: 2px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.dropdown {
+  position: fixed;
+  top: 44px;
+  z-index: 10;
+  width: 580px;
+  height: 200px;
+  background-color: var(--titlebar-bg);
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  padding: 10px;
+  z-index: 11;
+  gap: 8px;
+}
+
+.dropdown div:nth-child(3)::after {
+  border-bottom: 0.1px solid gray;
+}
+
+.dropdownItem {
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  border-radius: 4px;
+}
+
+.dropdownItem:hover {
+  background-color: slategray;
+}
+
+.dropdown p {
+  margin-left: 10px;
+  color: blanchedalmond;
+}
+
+.dropdownOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  opacity: 0;
+  transition: display 0.5s linear;
+}
+
+.dropdownOverlay.active {
+  display: block;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  border: 0.1px solid gray;
+  margin: 4px 0;
 }
