@@ -14,6 +14,7 @@
 .container {
   width: 40%;
   margin: 4px 0;
+  position: relative;
 }
 
 .input {
@@ -23,6 +24,8 @@
   padding: 2px 8px;
   color: white;
   border-radius: 2px;
+  position: absolute;
+  z-index: 1000;
 }
 
 .input:focus {
@@ -49,7 +52,7 @@
 }
 
 .dropdownItem {
-  height: 50px;
+  height: 24px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -57,7 +60,7 @@
   border-radius: 4px;
 }
 
-.dropdownItem:hover {
+.dropdownItem.active {
   background-color: slategray;
 }
 

@@ -6,12 +6,18 @@ export const useStore = create<ThemeSlice>((...a) => ({
 }));
 
 export function useThemeStore() {
-  const { openedThemeBar, toggleThemeBar } = useStore((state) => ({
-    openedThemeBar: state.openedThemeBar,
-    toggleThemeBar: state.toggleThemeBar,
-  }));
+  const { theme, setTheme, openedThemeBar, toggleThemeBar } = useStore(
+    (state) => ({
+      theme: state.theme,
+      setTheme: state.setTheme,
+      openedThemeBar: state.openedThemeBar,
+      toggleThemeBar: state.toggleThemeBar,
+    })
+  );
 
   return {
+    theme,
+    setTheme,
     openedThemeBar,
     toggleThemeBar,
   };

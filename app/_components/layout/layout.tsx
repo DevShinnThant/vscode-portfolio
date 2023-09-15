@@ -21,7 +21,7 @@ export default function Layout({
   children: React.ReactNode;
   font: NextFont;
 }) {
-  const { openedThemeBar } = useThemeStore();
+  const { theme, openedThemeBar } = useThemeStore();
 
   useEffect(() => {
     if (localStorage.getItem("theme")) {
@@ -30,7 +30,7 @@ export default function Layout({
         localStorage.getItem("theme") || ""
       );
     }
-  }, [openedThemeBar]);
+  }, [theme]);
 
   return (
     <html lang="en">

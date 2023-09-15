@@ -167,6 +167,7 @@ export default function Sidebar() {
             <div
               onClick={() => {
                 toggleThemeBar();
+                setOpenedSetting(false);
               }}
               className={styles.settingItem}
             >

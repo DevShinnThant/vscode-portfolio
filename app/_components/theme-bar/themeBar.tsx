@@ -1,5 +1,6 @@
 import { useThemeStore } from "@/app/_hook/useThemeStore";
 import styles from "./themeBar.module.css";
+import { useRef, useState } from "react";
 
 const items = [
   {
@@ -35,38 +36,57 @@ const items = [
 ];
 
 export default function ThemeBar() {
-  const { toggleThemeBar, openedThemeBar } = useThemeStore();
+  const inputRef = useRef<HTMLInputElement | null>(null);
+
+  const { toggleThemeBar, openedThemeBar, setTheme, theme } = useThemeStore();
+
+  const [themeList, setThemeList] = useState(items || []);
+
+  const onSearchChange = () => {
+    const query = inputRef?.current?.value;
+    if (query) {
+      setThemeList(
+        items.filter(
+          (item) => query?.toLocaleLowerCase() == item.label.toLocaleLowerCase()
+        )
+      );
+    } else {
+      setThemeList(items);
+    }
+  };
 
   const handleChangeTheme = (theme: string) => {
-    document.documentElement.setAttribute("theme", theme);
-    localStorage.setItem("theme", theme);
-    toggleThemeBar();
+    setTheme(theme);
   };
 
   return (
     <div className={styles.parent}>
       <div className={styles.container}>
         <input
-          placeholder="Select Color Theme (Up/Down Keys to Preview)"
+          onChange={() => onSearchChange()}
+          ref={inputRef}
+          placeholder="Select Color Theme"
           className={styles.input}
         />
         <div className={styles.dropdown}>
-          {items.map((item, index) => (
+          {themeList.map((item) => (
             <div
               onClick={() => handleChangeTheme(item.value)}
-              className={styles.dropdownItem}
+              className={`${styles.dropdownItem} ${
+                theme === item.value ? styles.active : ""
+              }`}
             >
               <img src={item.icon} width={20} height={30} />
               <p>{item.label}</p>
             </div>
           ))}
         </div>
-        {/* <div
+        <div
           onClick={toggleThemeBar}
           className={`${styles.dropdownOverlay} ${
             openedThemeBar ? styles.active : ""
           }`}
-        /> */}
+        />
       </div>
     </div>
   );
