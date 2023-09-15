@@ -41,6 +41,22 @@ const sidebarBottomItems = [
   },
 ];
 
+const settingItems = [
+  {
+    name: "Command Pattle...",
+    icon: ["&#x21E7;", "⌘", "P"],
+  },
+  {
+    name: "Setting",
+  },
+  {
+    name: "Extensions",
+  },
+  {
+    name: "",
+  },
+];
+
 export default function Sidebar() {
   const route = useSelectedLayoutSegment();
 
@@ -98,11 +114,68 @@ export default function Sidebar() {
               openedSetting ? styles.active : ""
             }`}
           >
-            ss
+            <div className={styles.settingItem}>
+              <p>Command Pattle</p>
+              <div>
+                <p>&#x21E7;</p>
+                <p>⌘</p>
+                <p>P</p>
+              </div>
+            </div>
+
+            <div className={styles.divider} />
+
+            <div className={styles.settingItem}>
+              <p>Profiles (Default)</p>
+              <div>
+                <p>&#8680;</p>
+              </div>
+            </div>
+
+            <div className={styles.settingItem}>
+              <p>Setting Sync is On</p>
+            </div>
+
+            <div className={styles.divider} />
+
+            <div className={styles.settingItem}>
+              <p>Settings</p>
+              <div>
+                <p>&#x21E7;</p>
+              </div>
+            </div>
+
+            <div className={styles.settingItem}>
+              <p>Extensions</p>
+              <div>
+                <p>&#x21E7;</p>
+                <p>⌘</p>
+                <p>X</p>
+              </div>
+            </div>
+
+            <div className={styles.settingItem}>
+              <p>Keyboard Shortcuts</p>
+              <div>
+                <p>[⌘K ⌘S]</p>
+              </div>
+            </div>
+
+            <div className={styles.settingItem}>
+              <p>Themes</p>
+            </div>
+
+            <div className={styles.divider} />
+
+            <div className={styles.settingItem}>
+              <p>Restart to Update (1)</p>
+            </div>
           </div>
           <div
             onClick={() => setOpenedSetting(false)}
-            className={styles.modalOverlay}
+            className={`${styles.modalOverlay} ${
+              openedSetting ? styles.active : ""
+            }`}
           />
         </div>
       </div>
