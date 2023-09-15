@@ -4,6 +4,7 @@
   background-color: var(--tabs-bg);
   border: 1px solid var(--tab-border);
   position: fixed;
+  overflow-x: scroll;
 }
 
 .container {

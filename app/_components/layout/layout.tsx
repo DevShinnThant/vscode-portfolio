@@ -10,6 +10,7 @@ import Sidebar from "../sidebar/sidebar";
 import Explorer from "@/app/_components/explorer/explorer";
 import BottomBar from "../bottom-bar/bottomBar";
 import TabBar from "../tab-bar/tabBar";
+import { TabProvider } from "@/app/_contexts/TabContext";
 
 export default function Layout({
   children,
@@ -33,12 +34,14 @@ export default function Layout({
       <body className={font.className}>
         <Header />
         <div className={styles.bodyWrapper}>
-          <Sidebar />
-          <Explorer />
-          <div className={styles.children}>
-            <TabBar />
-            <div className={styles.childrenWrapper}>{children}</div>
-          </div>
+          <TabProvider>
+            <Sidebar />
+            <Explorer />
+            <div className={styles.children}>
+              <TabBar />
+              <div className={styles.childrenWrapper}>{children}</div>
+            </div>
+          </TabProvider>
         </div>
         <BottomBar />
       </body>

@@ -2,6 +2,7 @@ import ChevronRight from "@/app/_components/icons/ChevronRight";
 import styles from "./explorer.module.css";
 import { useState } from "react";
 import Link from "next/link";
+import { useTabStore } from "@/app/_hook/useTabStore";
 
 const explorerItems = [
   {
@@ -39,6 +40,8 @@ const explorerItems = [
 export default function Explorer() {
   const [opened, setOpened] = useState<boolean>(true);
 
+  const { addTab } = useTabStore();
+
   return (
     <div className={styles.parent}>
       <div className={styles.title}>Explorer</div>
@@ -60,7 +63,14 @@ export default function Explorer() {
 
         <div className={`${styles.itemsContent} ${opened ? styles.show : ""}`}>
           {explorerItems.map((item) => (
-            <Link href={item.path} className={styles.itemContainer}>
+            <Link
+              key={item.name}
+              onClick={() => {
+                addTab(item);
+              }}
+              href={item.path}
+              className={styles.itemContainer}
+            >
               <img src={item.icon} width={14} height={14} />
               <div className={styles.itemName}>{item.name}</div>
             </Link>

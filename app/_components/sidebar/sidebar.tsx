@@ -9,6 +9,7 @@ import SettingsIcon from "@/app/_components/icons/SettingsIcon";
 
 import { useSelectedLayoutSegment } from "next/navigation";
 import Link from "next/link";
+import { useState } from "react";
 
 const sidebarTopItems = [
   {
@@ -38,14 +39,12 @@ const sidebarBottomItems = [
     Icon: AccountIcon,
     path: "/about",
   },
-  {
-    Icon: SettingsIcon,
-    path: "/settings",
-  },
 ];
 
 export default function Sidebar() {
   const route = useSelectedLayoutSegment();
+
+  const [openedSetting, setOpenedSetting] = useState<boolean>(false);
 
   return (
     <aside className={styles.parent}>
@@ -85,6 +84,27 @@ export default function Sidebar() {
             </div>
           </Link>
         ))}
+        <div>
+          <div
+            onClick={() => setOpenedSetting(!openedSetting)}
+            className={styles.iconContainer}
+          >
+            <SettingsIcon fill={"rgb(106, 115, 125)"} className={styles.icon} />
+            <div className={styles.count}>2</div>
+          </div>
+
+          <div
+            className={`${styles.settingModal} ${
+              openedSetting ? styles.active : ""
+            }`}
+          >
+            ss
+          </div>
+          <div
+            onClick={() => setOpenedSetting(false)}
+            className={styles.modalOverlay}
+          />
+        </div>
       </div>
     </aside>
   );

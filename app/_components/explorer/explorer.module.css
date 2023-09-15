@@ -54,6 +54,8 @@
   text-decoration: none;
   height: 20px;
   width: 100%;
+  padding-left: 4px;
+  border-radius: 4px;
   margin: 6px 0;
   display: flex;
   align-items: center;
@@ -66,6 +68,7 @@
 
 .itemName {
   margin-left: 8px;
-  font-weight: 300;
+  font-weight: 400;
+  font-size: 14px;
   color: white;
 }
