@@ -18,17 +18,24 @@ const Header = () => {
           </div>
         </div>
 
+        <div className={styles.searchContainer}>
+          <button className={styles.button}>
+            <img src="/search.svg" />
+            <p className={styles.title}>portfolio</p>
+          </button>
+        </div>
+
         {/* Center */}
-        <div className={styles.centerContainer}>
+        <div className={styles.rightContainer}>
           Shinn Thant - Visual Studio Code
         </div>
 
         {/* Right */}
-        <div className={styles.rightContainer}>
+        {/* <div className={styles.rightContainer}>
           <div className={styles.minimize} />
           <div className={styles.maximize} />
           <div className={styles.close} />
-        </div>
+        </div> */}
       </div>
     </div>
   );

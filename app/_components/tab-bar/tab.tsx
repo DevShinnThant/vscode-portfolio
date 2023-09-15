@@ -12,7 +12,6 @@ interface TabProps {
 
 export default function Tab({ name, icon, path }: TabProps) {
   const pathname = useSelectedLayoutSegment();
-  const router = useRouter();
 
   const { removeTab } = useTabStore();
 
@@ -32,7 +31,6 @@ export default function Tab({ name, icon, path }: TabProps) {
         <div
           onClick={() => {
             removeTab({ name, icon, path });
-            router.back();
           }}
           className={styles.crossIcon}
         >

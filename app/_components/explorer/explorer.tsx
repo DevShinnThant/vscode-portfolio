@@ -6,7 +6,7 @@ import { useTabStore } from "@/app/_hook/useTabStore";
 
 const explorerItems = [
   {
-    name: "home.jsx",
+    name: "index.tsx",
     path: "/",
     icon: "react_icon.svg",
   },
