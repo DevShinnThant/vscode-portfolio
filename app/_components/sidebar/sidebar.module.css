@@ -113,6 +113,12 @@
   align-items: center;
   height: 22px;
   padding: 0px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.settingItem:hover {
+  background-color: var(--sidebar-hover-bg);
 }
 
 .settingItem p {

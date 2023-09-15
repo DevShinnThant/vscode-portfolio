@@ -10,6 +10,7 @@ import SettingsIcon from "@/app/_components/icons/SettingsIcon";
 import { useSelectedLayoutSegment } from "next/navigation";
 import Link from "next/link";
 import { useState } from "react";
+import { useThemeStore } from "@/app/_hook/useThemeStore";
 
 const sidebarTopItems = [
   {
@@ -61,6 +62,8 @@ export default function Sidebar() {
   const route = useSelectedLayoutSegment();
 
   const [openedSetting, setOpenedSetting] = useState<boolean>(false);
+
+  const { toggleThemeBar } = useThemeStore();
 
   return (
     <aside className={styles.parent}>
@@ -161,7 +164,12 @@ export default function Sidebar() {
               </div>
             </div>
 
-            <div className={styles.settingItem}>
+            <div
+              onClick={() => {
+                toggleThemeBar();
+              }}
+              className={styles.settingItem}
+            >
               <p>Themes</p>
             </div>
 

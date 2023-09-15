@@ -11,6 +11,8 @@ import Explorer from "@/app/_components/explorer/explorer";
 import BottomBar from "../bottom-bar/bottomBar";
 import TabBar from "../tab-bar/tabBar";
 import { TabProvider } from "@/app/_contexts/TabContext";
+import ThemeBar from "../theme-bar/themeBar";
+import { useThemeStore } from "@/app/_hook/useThemeStore";
 
 export default function Layout({
   children,
@@ -19,6 +21,8 @@ export default function Layout({
   children: React.ReactNode;
   font: NextFont;
 }) {
+  const { openedThemeBar } = useThemeStore();
+
   useEffect(() => {
     if (localStorage.getItem("theme")) {
       document.documentElement.setAttribute(
@@ -32,7 +36,7 @@ export default function Layout({
     <html lang="en">
       <CustomHead />
       <body className={font.className}>
-        <Header />
+        {openedThemeBar ? <ThemeBar /> : <Header />}
         <div className={styles.bodyWrapper}>
           <TabProvider>
             <Sidebar />
