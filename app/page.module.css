@@ -3,19 +3,84 @@
   height: 100%;
   display: flex;
   align-items: center;
+  background-color: var(--main-bg);
 }
 
 .leftContainer {
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftChildContainer {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 500px;
+}
+
+.intro {
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 14px;
+  height: 30px;
+}
+
+.name {
+  color: #fff;
+  font-weight: 600;
+  font-size: 40px;
+  letter-spacing: 1px;
+  height: fit-content;
+}
+
+.subTitle {
+  margin-top: 10px;
+  color: lightslategray;
+  font-weight: 600;
+  font-size: 40px;
+  letter-spacing: 1px;
+  height: min-content;
+}
+
+.description {
+  margin-top: 25px;
+  font-size: 14px;
+  color: lightslategrey;
+  height: min-content;
+}
+
+.button {
+  margin-top: 60px;
+  border: 2px solid var(--accent-color);
+  width: 140px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding: 20px;
+}
+
+.button p {
+  height: fit-content;
+  color: var(--accent-color);
 }
 
 .rightContainer {
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .rightImage {
   background-image: url("/home-bg.jpg");
   background-size: contain;
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 500px;
 }
