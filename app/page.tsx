@@ -35,7 +35,7 @@ export default function Home() {
           loop={true}
           autoplay={true}
           color="white"
-          style={{ width: "500px", height: "500px" }}
+          style={{ width: "420px", height: "420px" }}
         />
       </div>
     </div>
