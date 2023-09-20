@@ -1,5 +1,6 @@
+"use client";
 import { useContext } from "react";
-import { TabContext } from "../_contexts/TabContext";
+import { TabContext } from "../store/client/TabContext";
 
 export const useTabStore = () => {
   const store = useContext(TabContext);

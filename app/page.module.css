@@ -79,7 +79,6 @@
 }
 
 .rightImage {
-  background-image: url("/home-bg.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   width: 500px;

@@ -1,8 +1,10 @@
-import ChevronRight from "@/app/_components/icons/ChevronRight";
+"use client";
+
+import ChevronRight from "@/app/icons/ChevronRight";
 import styles from "./explorer.module.css";
 import { useState } from "react";
 import Link from "next/link";
-import { useTabStore } from "@/app/_hook/useTabStore";
+import { useTabStore } from "@/app/lib/hooks/useTabStore";
 
 const explorerItems = [
   {

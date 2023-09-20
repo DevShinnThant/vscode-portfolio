@@ -1,4 +1,4 @@
-import { createThemeSlice, ThemeSlice } from "./../_slices/theme-slice";
+import { createThemeSlice, ThemeSlice } from "../store/client/themeSlice";
 import { create } from "zustand";
 
 export const useStore = create<ThemeSlice>((...a) => ({

@@ -1,4 +1,6 @@
-import { useTabStore } from "@/app/_hook/useTabStore";
+"use client";
+
+import { useTabStore } from "@/app/lib/hooks/useTabStore";
 import Tab from "./tab";
 import styles from "./tabBar.module.css";
 

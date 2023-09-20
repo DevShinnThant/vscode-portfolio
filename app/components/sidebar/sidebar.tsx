@@ -1,17 +1,18 @@
-import FilesIcon from "@/app/_components/icons/FilesIcon";
+"use client";
+
+import FilesIcon from "@/app/icons/FilesIcon";
 import styles from "./sidebar.module.css";
-import GithubIcon from "@/app/_components/icons/GithubIcon";
-import CodeIcon from "@/app/_components/icons/CodeIcon";
-import PencilIcon from "@/app/_components/icons/PencilIcon";
-import MailIcon from "@/app/_components/icons/MailIcon";
-import AccountIcon from "@/app/_components/icons/AccountIcon";
-import SettingsIcon from "@/app/_components/icons/SettingsIcon";
+import GithubIcon from "@/app/icons/GithubIcon";
+import CodeIcon from "@/app/icons/CodeIcon";
+import PencilIcon from "@/app/icons/PencilIcon";
+import MailIcon from "@/app/icons/MailIcon";
+import AccountIcon from "@/app/icons/AccountIcon";
+import SettingsIcon from "@/app/icons/SettingsIcon";
 
 import { useSelectedLayoutSegment } from "next/navigation";
 import Link from "next/link";
 import { useState } from "react";
-import { useThemeStore } from "@/app/_hook/useThemeStore";
-
+import { useThemeStore } from "@/app/lib/hooks/useThemeStore";
 const sidebarTopItems = [
   {
     Icon: FilesIcon,

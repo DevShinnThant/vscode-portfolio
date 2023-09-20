@@ -1,6 +1,5 @@
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -14,13 +13,22 @@ module.exports = {
         sans: ["var(--font-quicksand)", ...fontFamily.sans],
       },
       colors: {
-        // skin: {
-        //   accent: { DEFAULT: "#53CAB5", dark: "#3CAF9A" },
-        //   base: "#F9FFFF",
-        //   muted: "#EDF4F4",
-        //   dark: "#363636",
-        //   gray: "#D1DBD9",
-        // },
+        main: "var(--main-bg)",
+        mainText: "var(--bg-text)",
+        textColor: "var(--text-color)",
+        accentColor: "var(--accent-color)",
+        title: "var(--titlebar-bg)",
+        sidebar: "var(--sidebar-bg)",
+        sidebarHover: "var(--sidebar-hover-bg)",
+        explorer: "var(--explorer-bg)",
+        explorerHover: "var(--explorer-hover-bg)",
+        explorerBorder: "var(--explorer-border",
+        tabs: "var(--tabs-bg)",
+        tab: "var(--tab-bg)",
+        tabBorder: "var(--tab-border)",
+        tabActiveBg: "var(--tab-active-bg)",
+        bottomBar: "var(--bottombar-bg)",
+        bottomBorder: "var(--bottombar-border)",
       },
       boxShadow: {
         upper:

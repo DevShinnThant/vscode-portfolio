@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./tab.module.css";
 import Link from "next/link";
 import { useRouter, useSelectedLayoutSegment } from "next/navigation";
-import { useTabStore } from "@/app/_hook/useTabStore";
+import { useTabStore } from "@/app/lib/hooks/useTabStore";
 
 interface TabProps {
   name: string;

@@ -1,6 +1,7 @@
+"use client";
 import React, { createContext, useState } from "react";
-import { TabType, tabs as TABS } from "../_config/tabs";
 import { useRouter } from "next/navigation";
+import { TabType, tabs as TABS } from "../../utils/tabs";
 
 interface TabContextType {
   tabs: TabType[];

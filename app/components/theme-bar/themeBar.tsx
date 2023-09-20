@@ -1,4 +1,4 @@
-import { useThemeStore } from "@/app/_hook/useThemeStore";
+import { useThemeStore } from "@/app/lib/hooks/useThemeStore";
 import styles from "./themeBar.module.css";
 import { useRef, useState } from "react";
 
