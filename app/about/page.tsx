@@ -2,7 +2,7 @@ import styles from "./about.module.css";
 
 export default function About() {
   return (
-    <div className={styles.parent}>
+    <div className={`${styles.parent}`}>
       <div className={styles.container}>
         <p className={styles.title}>About {"/>"}</p>
         <div className={styles.bar} />
