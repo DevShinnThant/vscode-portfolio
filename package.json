@@ -12,6 +12,7 @@
     "@types/node": "20.6.0",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
+    "clsx": "^2.0.0",
     "eslint": "8.49.0",
     "eslint-config-next": "13.4.19",
     "lottie-react": "^2.4.0",

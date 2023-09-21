@@ -1,105 +1,62 @@
 "use client";
 
-import FilesIcon from "@/app/icons/FilesIcon";
-import styles from "./sidebar.module.css";
-import GithubIcon from "@/app/icons/GithubIcon";
-import CodeIcon from "@/app/icons/CodeIcon";
-import PencilIcon from "@/app/icons/PencilIcon";
-import MailIcon from "@/app/icons/MailIcon";
-import AccountIcon from "@/app/icons/AccountIcon";
+// Package
+import { clsx } from "clsx";
+
+// Hooks
+import { usePathname } from "next/navigation";
+import { useThemeStore } from "@/app/lib/hooks/useThemeStore";
+import { useState } from "react";
+
+// Icons
 import SettingsIcon from "@/app/icons/SettingsIcon";
 
-import { useSelectedLayoutSegment } from "next/navigation";
+// Components
 import Link from "next/link";
-import { useState } from "react";
-import { useThemeStore } from "@/app/lib/hooks/useThemeStore";
-const sidebarTopItems = [
-  {
-    Icon: FilesIcon,
-    path: "/",
-  },
-  {
-    Icon: GithubIcon,
-    path: "/github",
-  },
-  {
-    Icon: CodeIcon,
-    path: "/projects",
-  },
-  {
-    Icon: PencilIcon,
-    path: "/articles",
-  },
-  {
-    Icon: MailIcon,
-    path: "/contact",
-  },
-];
-
-const sidebarBottomItems = [
-  {
-    Icon: AccountIcon,
-    path: "/about",
-  },
-];
-
-const settingItems = [
-  {
-    name: "Command Pattle...",
-    icon: ["&#x21E7;", "⌘", "P"],
-  },
-  {
-    name: "Setting",
-  },
-  {
-    name: "Extensions",
-  },
-  {
-    name: "",
-  },
-];
+import Modal from "./components/Modal";
+import { sidebarBottomItems, sidebarTopItems } from "@/app/lib/utils/tabs";
 
 export default function Sidebar() {
-  const route = useSelectedLayoutSegment();
+  const pathname = usePathname();
 
   const [openedSetting, setOpenedSetting] = useState<boolean>(false);
 
   const { toggleThemeBar } = useThemeStore();
 
   return (
-    <aside className={styles.parent}>
-      <div className={styles.topIconContainer}>
+    <aside className="min-w-[40px] h-full bg-sidebar flex flex-col justify-between">
+      <div className="pt-[10px] w-full h-[300px] flex flex-col justify-center items-center">
         {sidebarTopItems.map(({ Icon, path }) => (
           <Link href={path} key={path}>
             <div
-              className={`${styles.iconContainer} ${
-                (route === null && path === "/" && styles.active) ||
-                ("/" + route === path && styles.active)
-              }`}
+              className={clsx(
+                "cursor-pointer w-full border-l-2 border-l-transparent relative z-10",
+                pathname === path && "border-l-accentColor"
+              )}
             >
               <Icon
                 fill={
-                  "/" + route === path
+                  pathname === path
                     ? "rgb(225, 228, 232)"
                     : "rgb(106, 115, 125)"
                 }
-                className={styles.icon}
+                className="w-[48px] h-[48px] py-[0.65rem] block mx-auto cursor-pointer"
               />
             </div>
           </Link>
         ))}
       </div>
-      <div className={styles.bottomIconContainer}>
+      <div className="w-full h-[100px] flex flex-col justify-center items-center">
         {sidebarBottomItems.map(({ Icon, path }) => (
           <Link href={path} key={path}>
-            <div className={styles.iconContainer}>
+            <div className="cursor-pointer w-full border-l-2 border-l-transparent relative z-10">
               <Icon
                 fill={
-                  "/" + route === path
+                  pathname === path
                     ? "rgb(225, 228, 232)"
                     : "rgb(106, 115, 125)"
                 }
-                className={styles.icon}
+                className="w-[48px] h-[48px] py-[0.65rem] block mx-auto cursor-pointer"
               />
             </div>
           </Link>
@@ -107,85 +64,21 @@ export default function Sidebar() {
         <div>
           <div
             onClick={() => setOpenedSetting(!openedSetting)}
-            className={styles.iconContainer}
+            className="cursor-pointer w-full border-l-2 border-l-transparent relative z-10"
           >
-            <SettingsIcon fill={"rgb(106, 115, 125)"} className={styles.icon} />
-            <div className={styles.count}>2</div>
+            <SettingsIcon
+              fill={"rgb(106, 115, 125)"}
+              className="w-[48px] h-[48px] py-[0.65rem] block mx-auto cursor-pointer"
+            />
+            <div className="absolute right-[4px] bottom-[8px] text-white text-[10px] font-extrabold w-[16px] h-[16px] rounded-full bg-blue-500 flex justify-center items-center">
+              2
+            </div>
           </div>
 
-          <div
-            className={`${styles.settingModal} ${
-              openedSetting ? styles.active : ""
-            }`}
-          >
-            <div className={styles.settingItem}>
-              <p>Command Pattle</p>
-              <div>
-                <p>&#x21E7;</p>
-                <p>⌘</p>
-                <p>P</p>
-              </div>
-            </div>
-
-            <div className={styles.divider} />
-
-            <div className={styles.settingItem}>
-              <p>Profiles (Default)</p>
-              <div>
-                <p>&#8680;</p>
-              </div>
-            </div>
-
-            <div className={styles.settingItem}>
-              <p>Setting Sync is On</p>
-            </div>
-
-            <div className={styles.divider} />
-
-            <div className={styles.settingItem}>
-              <p>Settings</p>
-              <div>
-                <p>&#x21E7;</p>
-              </div>
-            </div>
-
-            <div className={styles.settingItem}>
-              <p>Extensions</p>
-              <div>
-                <p>&#x21E7;</p>
-                <p>⌘</p>
-                <p>X</p>
-              </div>
-            </div>
-
-            <div className={styles.settingItem}>
-              <p>Keyboard Shortcuts</p>
-              <div>
-                <p>[⌘K ⌘S]</p>
-              </div>
-            </div>
-
-            <div
-              onClick={() => {
-                toggleThemeBar();
-                setOpenedSetting(false);
-              }}
-              className={styles.settingItem}
-            >
-              <p>Themes</p>
-            </div>
-
-            <div className={styles.divider} />
-
-            <div className={styles.settingItem}>
-              <p>Restart to Update (1)</p>
-            </div>
-          </div>
-          <div
-            onClick={() => setOpenedSetting(false)}
-            className={`${styles.modalOverlay} ${
-              openedSetting ? styles.active : ""
-            }`}
+          <Modal
+            openedSetting={openedSetting}
+            setOpenedSetting={setOpenedSetting}
+            toggleThemeBar={toggleThemeBar}
           />
         </div>
       </div>

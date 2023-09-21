@@ -2,14 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  height: 100%;
-  overflow: hidden;
-  margin: 0;
-}
-
+/* Theme */
 @layer base {
   html {
     --main-bg: #24292e;
@@ -123,5 +116,19 @@
     --tab-border: rgb(39, 43, 59);
     --bottombar-bg: #011627;
     --bottombar-border: #262a39;
+  }
+}
+
+@layer utilities {
+  .max-width {
+    @apply mx-auto w-full;
+  }
+
+  .settingModalItem {
+    @apply flex justify-between items-center h-[22px] px-[10px] cursor-pointer rounded-[4px] hover:bg-sidebarHover text-textColor text-[13px] font-[400]  leading-[1px];
+  }
+
+  .settingModalSymbolsContainer {
+    @apply flex items-center gap-[8px] text-gray-500 text-[12px];
   }
 }

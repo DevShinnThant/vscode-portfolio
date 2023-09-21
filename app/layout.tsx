@@ -1,6 +1,5 @@
 import "tailwindcss/tailwind.css";
 import "./globals.css";
-import "./theme.css";
 
 import type { Metadata } from "next";
 import { Source_Sans_3 } from "next/font/google";
@@ -29,13 +28,13 @@ export default function RootLayout({
       <CustomHead />
       <body className={SourceSans3.className}>
         {/* {openedThemeBar ? <ThemeBar /> : <Header />} */}
-        <div className="w-full h-[calc(100% - 53px)] flex items-center">
+        <div className="h-screen flex items-center">
           <TabProvider>
             <Sidebar />
             <Explorer />
-            <div className="w-full relative h-full flex flex-col">
+            <div className="max-width relative h-full flex flex-col">
               <TabBar />
-              <div className="mt-[36px]">{children}</div>
+              <div className="mt-[36px] max-width h-full">{children}</div>
             </div>
           </TabProvider>
         </div>
