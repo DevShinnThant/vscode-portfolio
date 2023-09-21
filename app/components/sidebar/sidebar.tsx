@@ -1,12 +1,10 @@
 "use client";
 
-// Package
-import { clsx } from "clsx";
-
 // Hooks
 import { usePathname } from "next/navigation";
 import { useThemeStore } from "@/app/lib/hooks/useThemeStore";
 import { useState } from "react";
+import { cn } from "@/app/lib/utils/style";
 
 // Icons
 import SettingsIcon from "@/app/icons/SettingsIcon";
@@ -24,14 +22,14 @@ export default function Sidebar() {
   const { toggleThemeBar } = useThemeStore();
 
   return (
-    <aside className="min-w-[40px] h-full bg-sidebar flex flex-col justify-between">
+    <aside className="min-w-[50px] h-full bg-sidebar flex flex-col justify-between">
       <div className="pt-[10px] w-full h-[300px] flex flex-col justify-center items-center">
         {sidebarTopItems.map(({ Icon, path }) => (
           <Link href={path} key={path}>
             <div
-              className={clsx(
-                "cursor-pointer w-full border-l-2 border-l-transparent relative z-10",
-                pathname === path && "border-l-accentColor"
+              className={cn(
+                "cursor-pointer w-full border-l-2 border-transparent relative z-10",
+                pathname === path ? "border-accentColor" : ""
               )}
             >
               <Icon

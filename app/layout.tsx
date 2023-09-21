@@ -1,14 +1,20 @@
 import "tailwindcss/tailwind.css";
 import "./globals.css";
 
+// Utils
 import type { Metadata } from "next";
 import { Source_Sans_3 } from "next/font/google";
 import Head from "next/head";
+
+// Provider
 import { TabProvider } from "./lib/store/client/TabContext";
+
+// Components
 import Sidebar from "./components/sidebar/sidebar";
 import Explorer from "./components/explorer/explorer";
 import TabBar from "./components/tab-bar/tabBar";
 import BottomBar from "./components/bottom-bar/bottomBar";
+import Header from "./components/header/Header";
 
 const SourceSans3 = Source_Sans_3({ subsets: ["latin"] });
 
@@ -22,23 +28,26 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // return <Layout font={SourceSans3}>{children}</Layout>;
   return (
     <html lang="en">
       <CustomHead />
       <body className={SourceSans3.className}>
-        {/* {openedThemeBar ? <ThemeBar /> : <Header />} */}
-        <div className="h-screen flex items-center">
-          <TabProvider>
-            <Sidebar />
-            <Explorer />
-            <div className="max-width relative h-full flex flex-col">
-              <TabBar />
-              <div className="mt-[36px] max-width h-full">{children}</div>
-            </div>
-          </TabProvider>
+        <div className="h-screen">
+          <div className="h-full flex flex-col">
+            <Header />
+            <TabProvider>
+              <div className="flex h-full">
+                <Sidebar />
+                <Explorer />
+                <div className="max-width h-full flex flex-col">
+                  <TabBar />
+                  <div className="mt-[36px] max-width h-full">{children}</div>
+                  <BottomBar />
+                </div>
+              </div>
+            </TabProvider>
+          </div>
         </div>
-        <BottomBar />
       </body>
     </html>
   );

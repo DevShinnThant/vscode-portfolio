@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { cn } from "@/app/lib/utils/style";
 import React, { SetStateAction } from "react";
 
 interface Props {
@@ -11,7 +11,7 @@ const Modal = ({ toggleThemeBar, openedSetting, setOpenedSetting }: Props) => {
   return (
     <div>
       <div
-        className={clsx(
+        className={cn(
           "fixed opacity-0 w-[280px] h-[220px] py-[8px] px-[16px] rounded-[10px] border-[0.4px] border-white z-10 bottom-[10px] left-[48px] bg-zinc-900  transition-all duration-300",
           openedSetting && "opacity-100"
         )}
@@ -81,7 +81,7 @@ const Modal = ({ toggleThemeBar, openedSetting, setOpenedSetting }: Props) => {
       </div>
       <div
         onClick={() => setOpenedSetting(false)}
-        className={clsx(
+        className={cn(
           "w-full h-screen fixed hidden top-0 z-[9] opacity-0",
           openedSetting && "block"
         )}

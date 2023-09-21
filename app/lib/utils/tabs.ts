@@ -12,11 +12,6 @@ export interface TabType {
   path: string;
 }
 
-export interface SidebarItemType {
-  Icon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
-  path: string;
-}
-
 export const tabs: TabType[] = [
   {
     icon: "/react_icon.svg",
@@ -50,6 +45,11 @@ export const tabs: TabType[] = [
   },
 ];
 
+export interface SidebarItemType {
+  Icon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
+  path: string;
+}
+
 export const sidebarTopItems: SidebarItemType[] = [
   {
     Icon: FilesIcon,
@@ -77,5 +77,44 @@ export const sidebarBottomItems: SidebarItemType[] = [
   {
     Icon: AccountIcon,
     path: "/about",
+  },
+];
+
+export interface ThemeItemType {
+  label: string;
+  value: string;
+  icon: string;
+}
+
+export const themeItems: ThemeItemType[] = [
+  {
+    label: "Github Dark",
+    value: "github-dark",
+    icon: "/github-dark.png",
+  },
+  {
+    label: "Dracula",
+    value: "dracula",
+    icon: "/dracula.png",
+  },
+  {
+    label: "Auy Dark",
+    value: "ayu-dark",
+    icon: "/ayu.png",
+  },
+  {
+    label: "Ayu Mirage",
+    value: "ayu-mirage",
+    icon: "/ayu.png",
+  },
+  {
+    label: "Nord",
+    value: "nord",
+    icon: "/nord.png",
+  },
+  {
+    label: "Night Owl",
+    value: "night-owl",
+    icon: "/night-owl.png",
   },
 ];
