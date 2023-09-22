@@ -22,8 +22,8 @@ export default function Sidebar() {
   const { toggleThemeBar } = useThemeStore();
 
   return (
-    <aside className="min-w-[50px] h-full bg-sidebar flex flex-col justify-between">
-      <div className="pt-[10px] w-full h-[300px] flex flex-col justify-center items-center">
+    <aside className="min-w-[50px] mb-[25px] bg-sidebar flex flex-col justify-between">
+      <div className="pt-[10px] w-full h-[300px] flex flex-col gap-2 justify-center items-center">
         {sidebarTopItems.map(({ Icon, path }) => (
           <Link href={path} key={path}>
             <div
@@ -59,26 +59,24 @@ export default function Sidebar() {
             </div>
           </Link>
         ))}
-        <div>
-          <div
-            onClick={() => setOpenedSetting(!openedSetting)}
-            className="cursor-pointer w-full border-l-2 border-l-transparent relative z-10"
-          >
-            <SettingsIcon
-              fill={"rgb(106, 115, 125)"}
-              className="w-[48px] h-[48px] py-[0.65rem] block mx-auto cursor-pointer"
-            />
-            <div className="absolute right-[4px] bottom-[8px] text-white text-[10px] font-extrabold w-[16px] h-[16px] rounded-full bg-blue-500 flex justify-center items-center">
-              2
-            </div>
-          </div>
-
-          <Modal
-            openedSetting={openedSetting}
-            setOpenedSetting={setOpenedSetting}
-            toggleThemeBar={toggleThemeBar}
+        <div
+          onClick={() => setOpenedSetting(!openedSetting)}
+          className="cursor-pointer w-full border-l-2 border-l-transparent relative z-10"
+        >
+          <SettingsIcon
+            fill={"rgb(106, 115, 125)"}
+            className="w-[48px] h-[48px] py-[0.65rem] block mx-auto cursor-pointer"
           />
+          <div className="absolute right-[4px] bottom-[8px] text-white text-[10px] font-extrabold w-[16px] h-[16px] rounded-full bg-blue-500 flex justify-center items-center">
+            2
+          </div>
         </div>
+
+        <Modal
+          openedSetting={openedSetting}
+          setOpenedSetting={setOpenedSetting}
+          toggleThemeBar={toggleThemeBar}
+        />
       </div>
     </aside>
   );
