@@ -1,43 +1,18 @@
 "use client";
 
-import ChevronRight from "@/app/icons/ChevronRight";
-import styles from "./explorer.module.css";
+// Hooks
 import { useState } from "react";
-import Link from "next/link";
 import { useTabStore } from "@/app/lib/hooks/useTabStore";
+import { cn } from "@/app/lib/utils/style";
 
-const explorerItems = [
-  {
-    name: "index.tsx",
-    path: "/",
-    icon: "react_icon.svg",
-  },
-  {
-    name: "about.html",
-    path: "/about",
-    icon: "html_icon.svg",
-  },
-  {
-    name: "contact.css",
-    path: "/contact",
-    icon: "css_icon.svg",
-  },
-  {
-    name: "projects.js",
-    path: "/projects",
-    icon: "js_icon.svg",
-  },
-  {
-    name: "articles.json",
-    path: "/articles",
-    icon: "json_icon.svg",
-  },
-  {
-    name: "github.md",
-    path: "/github",
-    icon: "markdown_icon.svg",
-  },
-];
+// Components
+import Link from "next/link";
+
+// Icons
+import ChevronRight from "@/app/icons/ChevronRight";
+
+// Links
+import { explorerItems } from "@/app/lib/utils/tabs";
 
 export default function Explorer() {
   const [opened, setOpened] = useState<boolean>(true);
@@ -45,25 +20,29 @@ export default function Explorer() {
   const { addTab } = useTabStore();
 
   return (
-    <div className={styles.parent}>
-      <div className={styles.title}>Explorer</div>
+    <div className="w-[18vw] h-full text-slate-300 bg-explorer border-r border-explorerBorder flex flex-col py-[0.5rem] px-[0.75rem]">
+      <div className="font-normal mt-2 mb-6 uppercase text-[0.8rem] leading-[1px] ">
+        Explorer
+      </div>
 
       {/*  */}
-      <div className={styles.container}>
+      <div className="h-full">
         <div
           onClick={() => setOpened(!opened)}
-          className={styles.dropdownContainer}
+          className="flex items-center cursor-pointer"
         >
-          <ChevronRight
-            style={{
-              transform: !opened ? "" : `rotate(90deg)`,
-              transition: `all linear 0.1s`,
-            }}
-          />
-          <div className={styles.dropdownTitle}>Portfolio</div>
+          <ChevronRight className={cn("transition", opened && "rotate-90")} />
+          <div className="ml-[10px] text-[12px] leading-[1px] font-medium uppercase">
+            Portfolio
+          </div>
         </div>
 
-        <div className={`${styles.itemsContent} ${opened ? styles.show : ""}`}>
+        <div
+          className={cn(
+            "mt-[10px] ml-[10px] h-0 w-full transition-all",
+            opened && "h-[200px]"
+          )}
+        >
           {explorerItems.map((item) => (
             <Link
               key={item.name}
@@ -71,15 +50,16 @@ export default function Explorer() {
                 addTab(item);
               }}
               href={item.path}
-              className={styles.itemContainer}
+              className="w-full h-[20px] pl-[4px] rounded-[4px] my-[6px] flex items-center cursor-pointer"
             >
               <img src={item.icon} width={14} height={14} />
-              <div className={styles.itemName}>{item.name}</div>
+              <div className="ml-[8px] font-normal text-[14px] text-white">
+                {item.name}
+              </div>
             </Link>
           ))}
         </div>
       </div>
-      {/*  */}
     </div>
   );
 }

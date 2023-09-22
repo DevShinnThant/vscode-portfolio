@@ -23,7 +23,7 @@ module.exports = {
         sidebarHover: "var(--sidebar-hover-bg)",
         explorer: "var(--explorer-bg)",
         explorerHover: "var(--explorer-hover-bg)",
-        explorerBorder: "var(--explorer-border",
+        explorerBorder: "var(--explorer-border)",
         tabs: "var(--tabs-bg)",
         tab: "var(--tab-bg)",
         tabBorder: "var(--tab-border)",
