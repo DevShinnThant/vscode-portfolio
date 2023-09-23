@@ -129,6 +129,30 @@
   }
 
   .settingModalSymbolsContainer {
-    @apply flex items-center gap-[8px] text-gray-500 text-[12px];
+    @apply flex items-center gap-2 text-gray-500 text-[12px];
+  }
+
+  .lineNumberCode {
+    @apply text-gray-400 tracking-[2px];
+  }
+
+  .declareCode {
+    @apply text-sm text-accentColor font-semibold;
+  }
+
+  .methodCode {
+    @apply text-textColor text-sm font-semibold tracking-[1px];
+  }
+
+  .methodCodeLight {
+    @apply text-textColor text-sm font-medium tracking-[1px];
+  }
+
+  .slash {
+    @apply tracking-[5px] text-gray-500 mr-[10px] text-sm;
+  }
+
+  .slashCode {
+    @apply tracking-[2px] text-gray-500 text-sm;
   }
 }

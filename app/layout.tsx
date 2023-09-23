@@ -36,16 +36,18 @@ export default function RootLayout({
           <div className="h-full flex flex-col">
             <Header />
             <TabProvider>
-              <div className="flex h-full">
+              <div className="flex h-[calc(100%_-_17px_-_25px)]">
                 <Sidebar />
                 <Explorer />
-                <div className="max-width mb-[25px]  flex flex-col">
+                <div className="max-width flex flex-col">
                   <TabBar />
-                  <div className="max-width h-full">{children}</div>
-                  <BottomBar />
+                  <div className="max-width h-full bg-main overflow-scroll">
+                    {children}
+                  </div>
                 </div>
               </div>
             </TabProvider>
+            <BottomBar />
           </div>
         </div>
       </body>

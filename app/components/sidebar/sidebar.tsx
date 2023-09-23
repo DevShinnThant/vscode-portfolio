@@ -22,7 +22,7 @@ export default function Sidebar() {
   const { toggleThemeBar } = useThemeStore();
 
   return (
-    <aside className="min-w-[50px] mb-[25px] bg-sidebar flex flex-col justify-between">
+    <aside className="min-w-[50px] h-full bg-sidebar flex flex-col justify-between">
       <div className="pt-[10px] w-full h-[300px] flex flex-col gap-2 justify-center items-center">
         {sidebarTopItems.map(({ Icon, path }) => (
           <Link href={path} key={path}>
