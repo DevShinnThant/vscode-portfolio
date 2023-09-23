@@ -39,8 +39,8 @@ export default function Explorer() {
 
         <div
           className={cn(
-            "mt-[10px] ml-[10px] h-0 w-full transition-all",
-            opened && "h-[200px]"
+            "mt-[10px] ml-[10px] opacity-0 h-0 w-full transition",
+            opened && "h-[200px] opacity-100"
           )}
         >
           {explorerItems.map((item) => (
