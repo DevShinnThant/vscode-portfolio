@@ -10,11 +10,11 @@ import Head from "next/head";
 import { TabProvider } from "./lib/store/client/TabContext";
 
 // Components
-import Sidebar from "./components/sidebar/sidebar";
-import Explorer from "./components/explorer/explorer";
-import TabBar from "./components/tab-bar/tabBar";
-import BottomBar from "./components/bottom-bar/bottomBar";
-import Header from "./components/header/Header";
+import Sidebar from "../components/sidebar/sidebar";
+import Explorer from "../components/explorer/explorer";
+import TabBar from "../components/tab-bar/tabBar";
+import BottomBar from "../components/bottom-bar/bottomBar";
+import Header from "../components/header/Header";
 
 const SourceSans3 = Source_Sans_3({ subsets: ["latin"] });
 

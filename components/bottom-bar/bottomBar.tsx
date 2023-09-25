@@ -1,9 +1,9 @@
-import BellIcon from "../../icons/BellIcon";
-import CheckIcon from "../../icons/CheckIcon";
-import ErrorIcon from "../../icons/ErrorIcon";
-import NextjsIcon from "../../icons/NextjsIcon";
-import SourceControlIcon from "../../icons/SourceControlIcon";
-import WarningIcon from "../../icons/WarningIcon";
+import BellIcon from "../../app/icons/BellIcon";
+import CheckIcon from "../../app/icons/CheckIcon";
+import ErrorIcon from "../../app/icons/ErrorIcon";
+import NextjsIcon from "../../app/icons/NextjsIcon";
+import SourceControlIcon from "../../app/icons/SourceControlIcon";
+import WarningIcon from "../../app/icons/WarningIcon";
 
 export default function BottomBar() {
   return (

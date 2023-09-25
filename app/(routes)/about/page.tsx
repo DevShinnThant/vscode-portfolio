@@ -5,7 +5,7 @@ const Code = ({ children, className }: HTMLAttributes<HTMLDivElement>) => {
   return (
     <div
       className={cn(
-        "px-[10px] w-full flex items-center cursor-pointer",
+        "px-[10px] w-full hover:bg-sidebarHover flex items-center cursor-pointer",
         className
       )}
     >
