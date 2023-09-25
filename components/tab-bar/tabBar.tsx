@@ -24,6 +24,7 @@ export default function TabBar() {
             src="/trash.svg"
             width={20}
             height={20}
+            alt="trash-icon"
           />
         </div>
       ) : null}

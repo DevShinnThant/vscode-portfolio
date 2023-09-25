@@ -13,6 +13,7 @@ import ChevronRight from "@/app/icons/ChevronRight";
 
 // Links
 import { explorerItems } from "@/app/lib/utils/tabs";
+import Image from "next/image";
 
 export default function Explorer() {
   const [opened, setOpened] = useState<boolean>(true);
@@ -52,7 +53,7 @@ export default function Explorer() {
               href={item.path}
               className="w-full h-[20px] pl-[4px] rounded-[4px] my-[6px] flex items-center cursor-pointer"
             >
-              <img src={item.icon} width={14} height={14} />
+              <Image alt="arrow-icon" src={item.icon} width={14} height={14} />
               <div className="ml-[8px] font-normal text-[14px] text-white">
                 {item.name}
               </div>

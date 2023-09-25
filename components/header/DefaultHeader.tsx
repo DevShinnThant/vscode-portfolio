@@ -18,7 +18,7 @@ const DefaultHeader = () => {
 
         <div className="w-full flex items-center justify-center">
           <button className="w-full py-2 h-[16px] bg-slate-600 outline-none border border-gray-400 rounded-[5px] flex items-center justify-center">
-            <img width={14} height={14} src="/search.svg" />
+            <img alt="portfolio" width={14} height={14} src="/search.svg" />
             <p className="ml-[10px] text-white text-[12px] font-[500]">
               portfolio
             </p>

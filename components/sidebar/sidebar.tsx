@@ -25,7 +25,7 @@ export default function Sidebar() {
     <aside className="min-w-[50px] h-full bg-sidebar flex flex-col justify-between">
       <div className="pt-[10px] w-full h-[300px] flex flex-col gap-2 justify-center items-center">
         {sidebarTopItems.map(({ Icon, path }) => (
-          <Link href={path} key={path}>
+          <Link aria-label={`Navigate the ${path} page`} href={path} key={path}>
             <div
               className={cn(
                 "cursor-pointer w-full border-l-2 border-transparent relative z-10",
@@ -46,7 +46,12 @@ export default function Sidebar() {
       </div>
       <div className="w-full h-[100px] flex flex-col justify-center items-center">
         {sidebarBottomItems.map(({ Icon, path }) => (
-          <Link className="m-0" href={path} key={path}>
+          <Link
+            aria-label={`Navigate the ${path} page`}
+            className="m-0"
+            href={path}
+            key={path}
+          >
             <div className="cursor-pointer w-full border-l-2 border-l-transparent relative z-10">
               <Icon
                 fill={

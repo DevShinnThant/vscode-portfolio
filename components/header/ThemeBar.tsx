@@ -50,7 +50,7 @@ export default function ThemeBar() {
                 theme === item.value && "bg-slate-500"
               )}
             >
-              <img src={item.icon} width={20} height={30} />
+              <img alt="arrow-icon" src={item.icon} width={20} height={30} />
               <p className="ml-[10px] text-gray-400">{item.label}</p>
             </div>
           ))}

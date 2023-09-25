@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="w-full h-full flex items-center">
+    <main className="w-full h-full flex items-center">
       <div className="flex justify-center items-center w-full h-full">
         <div className="w-[500px] h-[500px] flex flex-col justify-center items-start">
           <p className="text-accentColor font-semibold text-[14px]">
@@ -15,7 +15,7 @@ export default function Home() {
           <p className="mt-3 h-[30px] text-gray-500 font-semibold text-[30px] leading-[1px]">
             I love exploring new things!
           </p>
-          <p className="mt-[4px] text-[14px] tracking-[1px]  text-gray-500 ">
+          <p className="mt-[4px] text-[14px] tracking-[1px]  text-gray-600 ">
             🚀 &#160;&#160; I specialize in transforming ideas into
             pixel-perfect, user-friendly websites that not only look stunning
             but also function flawlessly. With a strong foundation in HTML, CSS,
@@ -39,6 +39,6 @@ export default function Home() {
           alt="Image"
         />
       </div>
-    </div>
+    </main>
   );
 }

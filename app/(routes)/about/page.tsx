@@ -16,7 +16,7 @@ const Code = ({ children, className }: HTMLAttributes<HTMLDivElement>) => {
 
 export default function About() {
   return (
-    <div className="w-full h-full flex flex-col items-center">
+    <main className="w-full h-full flex flex-col items-center">
       <div className="w-full h-full">
         <div className="text-gray-500 text-[14px] leading-[1px] p-[10px]">
           About {"/>"}
@@ -301,6 +301,6 @@ export default function About() {
           </Code>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
