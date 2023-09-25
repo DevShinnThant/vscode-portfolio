@@ -7,9 +7,9 @@ import WarningIcon from "../../app/icons/WarningIcon";
 
 export default function BottomBar() {
   return (
-    <div className="bg-bottomBar w-full h-[25px] overflow-hidden border-t border-bottomBorder text-neutral-300 px-[0.5rem] flex items-center justify-between text-[0.8rem]">
+    <div className="bg-bottomBar w-full h-[25px] border-t border-bottomBorder text-neutral-300 px-[0.5rem] flex items-center justify-between text-[0.8rem]">
       <div className="h-full flex items-center">
-        <a className="flex mr-[0.5rem] h-[24px] items-center cursor-pointer">
+        <a className="flex mr-[0.5rem] items-center cursor-pointer">
           <SourceControlIcon className="mr-[10px]" />
           <p>main</p>
         </a>

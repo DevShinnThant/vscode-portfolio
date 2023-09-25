@@ -133,7 +133,7 @@
   }
 
   .lineNumberCode {
-    @apply text-gray-400 tracking-[2px];
+    @apply text-gray-400 text-[12px] tracking-[2px];
   }
 
   .declareCode {

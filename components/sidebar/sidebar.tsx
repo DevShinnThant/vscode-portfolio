@@ -46,7 +46,7 @@ export default function Sidebar() {
       </div>
       <div className="w-full h-[100px] flex flex-col justify-center items-center">
         {sidebarBottomItems.map(({ Icon, path }) => (
-          <Link href={path} key={path}>
+          <Link className="m-0" href={path} key={path}>
             <div className="cursor-pointer w-full border-l-2 border-l-transparent relative z-10">
               <Icon
                 fill={
