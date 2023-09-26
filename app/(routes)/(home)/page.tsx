@@ -15,7 +15,7 @@ export default function Home() {
           <p className="mt-3 h-[30px] text-gray-500 font-semibold text-[30px] leading-[1px]">
             I love exploring new things!
           </p>
-          <p className="mt-[4px] text-[14px] tracking-[1px]  text-gray-600 ">
+          <p className="mt-[4px] text-[14px] tracking-[1px]  text-gray-500 ">
             🚀 &#160;&#160; I specialize in transforming ideas into
             pixel-perfect, user-friendly websites that not only look stunning
             but also function flawlessly. With a strong foundation in HTML, CSS,
