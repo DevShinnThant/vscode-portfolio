@@ -1,11 +1,11 @@
 "use client";
 
 // links
-import { themeItems } from "@/app/lib/utils/tabs";
+import { themeItems } from "@/lib/tabs";
 
 // hooks
-import { cn } from "@/app/lib/utils/style";
-import { useThemeStore } from "@/app/lib/hooks/useThemeStore";
+import { cn } from "@/lib/style";
+import { useThemeStore } from "@/lib/hooks/useThemeStore";
 import { useRef, useState } from "react";
 
 export default function ThemeBar() {

@@ -2,9 +2,9 @@
 
 // Hooks
 import { usePathname } from "next/navigation";
-import { useThemeStore } from "@/app/lib/hooks/useThemeStore";
+import { useThemeStore } from "@/lib/hooks/useThemeStore";
 import { useState } from "react";
-import { cn } from "@/app/lib/utils/style";
+import { cn } from "@/lib/style";
 
 // Icons
 import SettingsIcon from "@/app/icons/SettingsIcon";
@@ -12,7 +12,7 @@ import SettingsIcon from "@/app/icons/SettingsIcon";
 // Components
 import Link from "next/link";
 import Modal from "./components/Modal";
-import { sidebarBottomItems, sidebarTopItems } from "@/app/lib/utils/tabs";
+import { sidebarBottomItems, sidebarTopItems } from "@/lib/tabs";
 
 export default function Sidebar() {
   const pathname = usePathname();

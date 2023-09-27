@@ -1,6 +1,6 @@
 "use client";
 
-import { useTabStore } from "@/app/lib/hooks/useTabStore";
+import { useTabStore } from "@/lib/hooks/useTabStore";
 import Tab from "./tab";
 
 export default function TabBar() {

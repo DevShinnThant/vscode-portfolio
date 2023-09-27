@@ -1,6 +1,6 @@
 "use client";
 
-import { useThemeStore } from "@/app/lib/hooks/useThemeStore";
+import { useThemeStore } from "@/lib/hooks/useThemeStore";
 import DefaultHeader from "./DefaultHeader";
 import ThemeBar from "./ThemeBar";
 

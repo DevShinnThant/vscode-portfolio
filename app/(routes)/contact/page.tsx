@@ -26,41 +26,44 @@ export default function Contact() {
               Leave me a message
               <div className="w-3/4 py-8">
                 <form>
-                  <div className="relative mb-8">
-                    <input
-                      type="text"
-                      className="block px-3 py-2 w-full text-sm text-gray-400 bg-transparent rounded border border-gray-300 appearance-none focus:outline-none focus:ring-0 peer"
-                      placeholder=""
-                    />
-                    <label className="text-gray-400 bg-main text-sm mb-2 duration-300 absolute top-2 left-1 px-2 transform origin-[0] peer-focus:top-2 peer-focus:scale-90 peer-focus:-translate-y-5">
+                  <div className="mb-4">
+                    <label htmlFor="name" className="text-gray-400 text-sm ">
                       Name
                     </label>
+                    <input
+                      id="name"
+                      type="text"
+                      className="block mt-2 tracking-[1px] px-3 py-2 w-full text-sm text-gray-400 bg-transparent rounded border border-gray-300 appearance-none focus:outline-none focus:ring-0"
+                      placeholder="Enter Name"
+                    />
                   </div>
 
-                  <div className="relative mb-8">
-                    <input
-                      type="email"
-                      className="block px-3 py-2 w-full text-sm text-gray-400 bg-transparent rounded border border-gray-300 appearance-none focus:outline-none focus:ring-0 peer"
-                      placeholder=""
-                    />
-                    <label className="text-gray-400 bg-main text-sm mb-2 duration-300 absolute top-2 left-1 px-2 transform origin-[0] peer-focus:top-2 peer-focus:scale-90 peer-focus:-translate-y-5">
+                  <div className="mb-4">
+                    <label htmlFor="email" className="text-gray-400 text-sm ">
                       Email
                     </label>
+                    <input
+                      name="email"
+                      type="email"
+                      className="block tracking-[1px] mt-2 px-3 py-2 w-full text-sm text-gray-400 bg-transparent rounded border border-gray-300 appearance-none focus:outline-none focus:ring-0 peer"
+                      placeholder="Enter Email"
+                    />
                   </div>
 
-                  <div className="relative mb-8">
-                    <textarea
-                      className="mt-3 block p-3 tracking-[1px] h-20 w-full text-xs bg-transparent rounded-md border text-gray-400 leading-tight border-gray-300 focus:outline-none peer"
-                      placeholder=""
-                    />
-                    <label className="text-gray-400 bg-main text-sm mb-2 duration-300 absolute top-2 left-1 px-2 transform origin-[0] peer-focus:top-2 peer-focus:scale-90 peer-focus:-translate-y-5">
+                  <div className="mb-4">
+                    <label htmlFor="message" className="text-gray-400 text-sm ">
                       Message
                     </label>
+                    <textarea
+                      id="message"
+                      className="mt-3 block p-3 tracking-[1px] h-20 w-full text-sm bg-transparent rounded-md border text-gray-400 leading-tight border-gray-300 focus:outline-none peer"
+                      placeholder="Enter message"
+                    />
                   </div>
 
                   <button
                     type="submit"
-                    className="mt-2 hover:opacity-50 cursor-pointer w-full h-10 bg-accentColor font-semibold tracking-[1px] rounded-md text-white"
+                    className="mt-2 cursor-pointer w-full h-10 bg-accentColor backdrop-contrast-200 font-semibold tracking-[1px] rounded-md text-white"
                   >
                     Send
                   </button>
@@ -68,7 +71,7 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <div className="col-span-6 cursor-pointer  py-16">
+          <div className="col-span-6 cursor-pointer pt-24">
             <div className="flex flex-col gap-4">
               <div className="flex gap-3 items-center">
                 <FiMapPin color="white" />
@@ -99,19 +102,30 @@ export default function Contact() {
               </div>
 
               <div className="mt-8 flex items-center gap-4">
-                <Link href="/facebook.com/Shinn Thant">
+                <Link
+                  aria-label="Navigate to shinnthant's facebook profile"
+                  href="/facebook.com/Shinn Thant"
+                >
                   <BsFacebook color="white" />
                 </Link>
-                <Link href="/instagram.com/Shinn Thant Jr">
+                <Link
+                  aria-label="Navigate to shinnthant's instagram profile"
+                  href="/instagram.com/Shinn Thant Jr"
+                >
                   <BsInstagram color="white" />
                 </Link>
                 <Link
+                  aria-label="Navigate to shinnthant's linkedin profile"
                   href="https://www.linkedin.com/in/shinn-thant-b90533231/"
                   target="_blank"
                 >
                   <BsLinkedin color="white" />
                 </Link>
-                <Link href="https://github.com/shinnTNT/" target="_blank">
+                <Link
+                  aria-label="Navigate to shinnthant's github profile"
+                  href="https://github.com/shinnTNT/"
+                  target="_blank"
+                >
                   <BsGithub color="white" />
                 </Link>
               </div>

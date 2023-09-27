@@ -1,4 +1,4 @@
-import { cn } from "@/app/lib/utils/style";
+import { cn } from "@/lib/style";
 import React, { SetStateAction } from "react";
 
 interface Props {

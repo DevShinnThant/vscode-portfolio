@@ -7,7 +7,7 @@ import { Source_Sans_3 } from "next/font/google";
 import Head from "next/head";
 
 // Provider
-import { TabProvider } from "./lib/store/client/TabContext";
+import { TabProvider } from "../lib/store/client/TabContext";
 
 // Components
 import Sidebar from "../components/sidebar/sidebar";

@@ -2,8 +2,8 @@
 
 // Hooks
 import { useState } from "react";
-import { useTabStore } from "@/app/lib/hooks/useTabStore";
-import { cn } from "@/app/lib/utils/style";
+import { useTabStore } from "@/lib/hooks/useTabStore";
+import { cn } from "@/lib/style";
 
 // Components
 import Link from "next/link";
@@ -12,7 +12,7 @@ import Link from "next/link";
 import ChevronRight from "@/app/icons/ChevronRight";
 
 // Links
-import { explorerItems } from "@/app/lib/utils/tabs";
+import { explorerItems } from "@/lib/tabs";
 import Image from "next/image";
 
 export default function Explorer() {

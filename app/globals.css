@@ -155,4 +155,13 @@
   .slashCode {
     @apply tracking-[2px] text-gray-500 text-sm;
   }
+
+  .cards:hover > .card:not(:hover) {
+    opacity: 0.5;
+    color: rgb(209 213 219 / var(--tw-text-opacity));
+  }
+
+  .cards:hover > .card:hover > .title {
+    color: var(--accent-color);
+  }
 }

@@ -126,14 +126,14 @@ export const explorerItems = [
     icon: "react_icon.svg",
   },
   {
-    name: "about.html",
+    name: "about.js",
     path: "/about",
-    icon: "html_icon.svg",
+    icon: "js_icon.svg",
   },
   {
-    name: "contact.css",
+    name: "contact.html",
     path: "/contact",
-    icon: "css_icon.svg",
+    icon: "html_icon.svg",
   },
   {
     name: "projects.js",
@@ -149,5 +149,56 @@ export const explorerItems = [
     name: "github.md",
     path: "/github",
     icon: "markdown_icon.svg",
+  },
+];
+
+export const projects = [
+  {
+    id: 1,
+    title: "The Beast Fitness",
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maximetenetur facere excepturi.",
+    image: "/nord.png",
+    link: "/thebeast.svg",
+  },
+  {
+    id: 2,
+    title: "Pocket Nicotine",
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maximetenetur facere excepturi.",
+    image: "/pocketnicotine-logo.png",
+    link: "/",
+  },
+  {
+    id: 3,
+    title: "App Studio",
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maximetenetur facere excepturi.",
+    image: "/app-studio.png",
+    link: "/",
+  },
+  {
+    id: 4,
+    title: "Vscode Portfolio",
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maximetenetur facere excepturi.",
+    image: "/nord.png",
+    link: "/",
+  },
+  {
+    id: 5,
+    title: "MUI Dashboard",
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maximetenetur facere excepturi.",
+    image: "/nord.png",
+    link: "/",
+  },
+  {
+    id: 6,
+    title: "Crown Clothing",
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maximetenetur facere excepturi.",
+    image: "/nord.png",
+    link: "/",
   },
 ];

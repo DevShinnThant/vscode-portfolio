@@ -4,8 +4,8 @@ import Link from "next/link";
 
 // Hooks
 import { usePathname } from "next/navigation";
-import { useTabStore } from "@/app/lib/hooks/useTabStore";
-import { cn } from "@/app/lib/utils/style";
+import { useTabStore } from "@/lib/hooks/useTabStore";
+import { cn } from "@/lib/style";
 
 interface TabProps {
   name: string;
