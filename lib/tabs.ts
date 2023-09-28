@@ -136,14 +136,9 @@ export const explorerItems = [
     icon: "html_icon.svg",
   },
   {
-    name: "projects.js",
+    name: "projects.tsx",
     path: "/projects",
-    icon: "js_icon.svg",
-  },
-  {
-    name: "articles.json",
-    path: "/articles",
-    icon: "json_icon.svg",
+    icon: "react_icon.svg",
   },
   {
     name: "github.md",
