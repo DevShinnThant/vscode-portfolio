@@ -4,7 +4,6 @@
 import { usePathname } from "next/navigation";
 import { useThemeStore } from "@/lib/hooks/useThemeStore";
 import { useState } from "react";
-import { cn } from "@/lib/style";
 
 // Icons
 import SettingsIcon from "@/app/icons/SettingsIcon";
@@ -13,6 +12,7 @@ import SettingsIcon from "@/app/icons/SettingsIcon";
 import Link from "next/link";
 import Modal from "./components/Modal";
 import { sidebarBottomItems, sidebarTopItems } from "@/lib/tabs";
+import { cn } from "@/lib/utils";
 
 export default function Sidebar() {
   const pathname = usePathname();

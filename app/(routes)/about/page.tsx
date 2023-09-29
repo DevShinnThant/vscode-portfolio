@@ -1,4 +1,4 @@
-import { cn } from "@/lib/style";
+import { cn } from "@/lib/utils";
 import React, { HTMLAttributes } from "react";
 
 const Code = ({ children, className }: HTMLAttributes<HTMLDivElement>) => {

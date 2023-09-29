@@ -4,9 +4,9 @@
 import { themeItems } from "@/lib/tabs";
 
 // hooks
-import { cn } from "@/lib/style";
 import { useThemeStore } from "@/lib/hooks/useThemeStore";
 import { useRef, useState } from "react";
+import { cn } from "@/lib/utils";
 
 export default function ThemeBar() {
   const inputRef = useRef<HTMLInputElement | null>(null);

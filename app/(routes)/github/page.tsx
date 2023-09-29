@@ -2,7 +2,9 @@ import Card from "./components/Card";
 import CardGrid from "./components/CardGrid";
 
 async function getGitRepos() {
-  const response = await fetch("https://api.github.com/users/ShinnTNT/repos");
+  const response = await fetch(
+    "https://api.github.com/users/ShinnTNT/repos?per_page=12"
+  );
   return response.json();
 }
 

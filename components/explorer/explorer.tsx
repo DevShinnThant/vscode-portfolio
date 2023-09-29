@@ -3,7 +3,6 @@
 // Hooks
 import { useState } from "react";
 import { useTabStore } from "@/lib/hooks/useTabStore";
-import { cn } from "@/lib/style";
 
 // Components
 import Link from "next/link";
@@ -14,6 +13,7 @@ import ChevronRight from "@/app/icons/ChevronRight";
 // Links
 import { explorerItems } from "@/lib/tabs";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 export default function Explorer() {
   const [opened, setOpened] = useState<boolean>(true);
