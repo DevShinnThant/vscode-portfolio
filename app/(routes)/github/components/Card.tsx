@@ -33,7 +33,10 @@ const Card = ({ name, description, repoType, star, tech, watcher }: Props) => {
         {tech ? (
           <div className="flex items-center gap-1">
             <div
-              className={cn("w-3 h-3 rounded-full", getRepoTechColor(tech))}
+              className={cn(
+                "w-3 h-3 rounded-full",
+                `${getRepoTechColor(tech)}`
+              )}
             />
             <div className="text-gray-400 text-[12px]">{tech}</div>
           </div>

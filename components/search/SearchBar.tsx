@@ -1,12 +1,26 @@
+import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/router";
+
 const SearchBar = () => {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+  }
+
   return (
     <div className="mb-3">
-      <div className="relative w-80 mb-4 flex  flex-wrap items-stretch">
+      <form
+        onSubmit={onSubmit}
+        className="relative w-80 mb-4 flex  flex-wrap items-stretch"
+      >
         <input
           type="search"
           className="relative m-0 block w-[1px] min-w-0 flex-auto rounded border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:text-gray-300 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none "
           placeholder="Search"
           aria-label="Search"
+          autoComplete="off"
           aria-describedby="button-addon2"
         />
 
@@ -27,7 +41,7 @@ const SearchBar = () => {
             />
           </svg>
         </span>
-      </div>
+      </form>
     </div>
   );
 };
