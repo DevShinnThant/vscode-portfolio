@@ -1,5 +1,6 @@
-import { useSearchParams } from "next/navigation";
-import { useRouter } from "next/router";
+"use client";
+
+import { useSearchParams, useRouter } from "next/navigation";
 
 const SearchBar = () => {
   const router = useRouter();
@@ -7,6 +8,26 @@ const SearchBar = () => {
 
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+
+    const form = e.target as HTMLFormElement;
+    const input = form.search as HTMLInputElement;
+
+    const newParams = new URLSearchParams(searchParams.toString());
+
+    if (input.value) {
+      newParams.set("q", input.value);
+    } else {
+      newParams.delete("q");
+    }
+
+    const paramsString = newParams.toString();
+    const query = `${paramsString.length ? "?" : ""}${paramsString}`;
+
+    if (paramsString) {
+      router.push(`/github/search${query}`);
+    } else {
+      router.push("/github");
+    }
   }
 
   return (
@@ -16,7 +37,8 @@ const SearchBar = () => {
         className="relative w-80 mb-4 flex  flex-wrap items-stretch"
       >
         <input
-          type="search"
+          type="text"
+          name="search"
           className="relative m-0 block w-[1px] min-w-0 flex-auto rounded border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:text-gray-300 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none "
           placeholder="Search"
           aria-label="Search"
