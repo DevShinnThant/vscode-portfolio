@@ -33,14 +33,20 @@ export default async function SearchPage({
   return (
     <main className="w-full">
       <CardGrid>
-        <Card
-          name={repo.name}
-          description={repo.description}
-          repoType={repo.visibility}
-          star={repo.stargazers_count}
-          tech={repo.language}
-          watcher={repo.watchers}
-        />
+        {repo ? (
+          <Card
+            name={repo.name}
+            description={repo.description}
+            repoType={repo.visibility}
+            star={repo.stargazers_count}
+            tech={repo.language}
+            watcher={repo.watchers}
+          />
+        ) : (
+          <div className="w-[200px] font-bold text-lg text-gray-500">
+            No Repository Found!
+          </div>
+        )}
       </CardGrid>
     </main>
   );

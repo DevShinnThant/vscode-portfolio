@@ -11,6 +11,7 @@ async function getGitRepos() {
       },
     }
   );
+
   return response.json();
 }
 

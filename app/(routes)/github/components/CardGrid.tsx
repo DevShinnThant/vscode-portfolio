@@ -1,8 +1,15 @@
-import React from "react";
+import { cn } from "@/lib/utils";
+import React, { HTMLAttributes } from "react";
 
-const CardGrid = ({ children }: { children: React.ReactNode }) => {
+interface Props extends HTMLAttributes<HTMLDivElement> {
+  children: React.ReactNode;
+}
+
+const CardGrid = ({ children, className }: Props) => {
   return (
-    <div className="w-full m-auto grid grid-cols-12 gap-8">{children}</div>
+    <div className={cn("w-full m-auto grid grid-cols-12 gap-8", className)}>
+      {children}
+    </div>
   );
 };
 
