@@ -1,5 +1,6 @@
 import React from "react";
 import CardGrid from "../components/CardGrid";
+import Card from "../components/Card";
 
 export const metadata = {
   title: "Search",
@@ -8,10 +9,10 @@ export const metadata = {
 
 async function fetchRepo(slug: string) {
   const response = await fetch(
-    `https://api.github.com/repos/ShinnTNT/${slug}`,
+    `https://api.github.com/search/repositories?q=${slug}+user:ShinnTNT`,
     {
-      next: {
-        revalidate: 60,
+      headers: {
+        Authorization: `token ${process.env.GITHUB_TOKEN}`,
       },
     }
   );
@@ -25,11 +26,22 @@ export default async function SearchPage({
 }) {
   const { q: searchValue } = searchParams;
 
-  const repo = await fetchRepo(searchValue);
+  const { items } = await fetchRepo(searchValue);
+
+  const repo = items[0];
 
   return (
     <main className="w-full">
-      <CardGrid>{/* <Card/> */}</CardGrid>
+      <CardGrid>
+        <Card
+          name={repo.name}
+          description={repo.description}
+          repoType={repo.visibility}
+          star={repo.stargazers_count}
+          tech={repo.language}
+          watcher={repo.watchers}
+        />
+      </CardGrid>
     </main>
   );
 }
