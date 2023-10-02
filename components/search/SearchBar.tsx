@@ -18,6 +18,7 @@ const SearchBar = () => {
       newParams.set("q", input.value);
     } else {
       newParams.delete("q");
+      newParams.delete("slug");
     }
 
     const paramsString = newParams.toString();

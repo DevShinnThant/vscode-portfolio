@@ -3,7 +3,7 @@ import CardGrid from "./components/CardGrid";
 
 async function getGitRepos() {
   const response = await fetch(
-    "https://api.github.com/users/ShinnTNT/repos?per_page=12",
+    "https://api.github.com/users/ShinnTNT/repos?type=all",
     {
       next: {
         revalidate: 86400,

@@ -7,7 +7,7 @@ export default function GithubLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="w-full h-full pt-8">
+    <div className="w-full h-full">
       <div className="w-4/5 m-auto">
         <div className="flex justify-between items-center">
           <div className="tracking-[1px] border-b w-fit border-gray-400 mb-6 text-xl text-gray-400">
@@ -15,7 +15,7 @@ export default function GithubLayout({
           </div>
           <SearchBar />
         </div>
-        <div className="w-full">{children}</div>
+        <div className="w-full overflow-scroll">{children}</div>
       </div>
     </div>
   );

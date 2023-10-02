@@ -35,6 +35,7 @@ export default async function SearchPage({
       <CardGrid>
         {repo ? (
           <Card
+            key={repo.id}
             name={repo.name}
             description={repo.description}
             repoType={repo.visibility}
