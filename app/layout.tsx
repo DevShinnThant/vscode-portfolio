@@ -36,7 +36,7 @@ export default function RootLayout({
           <div className="h-full flex flex-col">
             <Header />
             <TabProvider>
-              <div className="flex h-[calc(100%_-_17px_-_25px)]">
+              <div className="flex h-[calc(100%_-_17px_-_38px)]">
                 <Sidebar />
                 <Explorer />
                 <div className="max-width flex flex-col">

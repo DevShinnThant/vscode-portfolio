@@ -1,6 +1,6 @@
 const DefaultHeader = () => {
   return (
-    <div className="w-full h-[30px] bg-title px-[0.5rem] flex items-center justify-center text-white text-[0.85rem] border-b border-b-[#191d20]">
+    <div className="w-full over h-[30px] bg-title px-[0.5rem] flex items-center justify-center text-white text-[0.85rem] border-b border-b-[#191d20]">
       <div className="w-full grid grid-cols-3">
         {/* Left */}
         <div className="flex items-center">

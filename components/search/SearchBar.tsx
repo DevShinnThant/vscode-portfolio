@@ -40,7 +40,7 @@ const SearchBar = () => {
         <input
           type="text"
           name="search"
-          className="relative m-0 block w-[1px] min-w-0 flex-auto rounded border focus:text-white border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-white outline-none transition duration-200 ease-in-out focus:z-[3] focus:text-title focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none "
+          className="relative  m-0 block w-[1px] min-w-0 flex-auto rounded border focus:text-white border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-white outline-none transition duration-200 ease-in-out focus:z-[3] focus:text-title focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none "
           placeholder="Search"
           aria-label="Search"
           autoComplete="off"
