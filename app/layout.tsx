@@ -31,11 +31,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <CustomHead />
-      <body className={SourceSans3.className}>
-        <div className="h-screen">
-          <div className="h-full flex flex-col">
-            <Header />
-            <TabProvider>
+      <TabProvider>
+        <body className={SourceSans3.className}>
+          <div className="h-screen">
+            <div className="h-full flex flex-col">
+              <Header />
+
               <div className="flex h-[calc(100%_-_17px_-_38px)]">
                 <Sidebar />
                 <Explorer />
@@ -46,11 +47,12 @@ export default function RootLayout({
                   </div>
                 </div>
               </div>
-            </TabProvider>
-            <BottomBar />
+
+              <BottomBar />
+            </div>
           </div>
-        </div>
-      </body>
+        </body>
+      </TabProvider>
     </html>
   );
 }
