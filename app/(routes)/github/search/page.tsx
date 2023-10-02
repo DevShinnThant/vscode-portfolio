@@ -2,11 +2,6 @@ import React from "react";
 import CardGrid from "../components/CardGrid";
 import Card from "../components/Card";
 
-export const metadata = {
-  title: "Search",
-  description: "Search for repositories in the github account.",
-};
-
 async function fetchRepo(slug: string) {
   const response = await fetch(
     `https://api.github.com/search/repositories?q=${slug}+user:ShinnTNT`,
@@ -28,7 +23,7 @@ export default async function SearchPage({
 
   const { items } = await fetchRepo(searchValue);
 
-  const repo = items[0];
+  const repo = items ? items[0] : null;
 
   return (
     <main className="w-full">

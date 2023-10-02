@@ -64,10 +64,6 @@ export const sidebarTopItems: SidebarItemType[] = [
     path: "/projects",
   },
   {
-    Icon: PencilIcon,
-    path: "/articles",
-  },
-  {
     Icon: MailIcon,
     path: "/contact",
   },
