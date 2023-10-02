@@ -123,27 +123,27 @@ export const explorerItems = [
   {
     name: "index.tsx",
     path: "/",
-    icon: "react_icon.svg",
+    icon: "/react_icon.svg",
   },
   {
     name: "about.js",
     path: "/about",
-    icon: "js_icon.svg",
+    icon: "/js_icon.svg",
   },
   {
     name: "contact.html",
     path: "/contact",
-    icon: "html_icon.svg",
+    icon: "/html_icon.svg",
   },
   {
     name: "projects.tsx",
     path: "/projects",
-    icon: "react_icon.svg",
+    icon: "/react_icon.svg",
   },
   {
     name: "github.md",
     path: "/github",
-    icon: "markdown_icon.svg",
+    icon: "/markdown_icon.svg",
   },
 ];
 
