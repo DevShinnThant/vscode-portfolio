@@ -98,6 +98,21 @@ const CustomHead = () => {
         property="twitter:image"
         content="https://i.postimg.cc/Sx4TkjqW/devshinn-portforlio.png"
       />
+
+      <meta property="telegram:card" content="summary_large_image" />
+      <meta
+        property="telegram:url"
+        content="https://devshinnthant.vercel.app/"
+      />
+      <meta property="telegram:title" content="Shinn Thant | FrontEnd Dev" />
+      <meta
+        property="telegram:description"
+        content="Experienced front-end developer skilled in building robust web applications."
+      />
+      <meta
+        property="telegram:image"
+        content="https://i.postimg.cc/Sx4TkjqW/devshinn-portforlio.png"
+      />
     </Head>
   );
 };
