@@ -30,7 +30,46 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <CustomHead />
+      <head>
+        <title>Shinn Thant</title>
+        <meta
+          name="description"
+          content="Shinn Thant is a front end developer building websites and applications you'd love to use"
+        />
+        <meta
+          name="keywords"
+          content="shinn thant, web developer,vscode portfolio, nextjs, shinn thant portfolio, vscode-portfolio"
+        />
+        <meta
+          property="og:description"
+          content="A front-end developer building websites that you'd like to use."
+        />
+        <meta property="og:title" content="Shinn Thant's Portfolio" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://devshinnthant.vercel.app/" />
+        <meta
+          property="og:description"
+          content="A front-end developer building websites that you'd like to use."
+        />
+        <meta
+          property="og:image"
+          content="https://i.postimg.cc/Sx4TkjqW/devshinn-portforlio.png"
+        />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="https://devshinnthant.vercel.app/"
+        />
+        <meta property="twitter:title" content="Shinn Thant | FrontEnd Dev" />
+        <meta
+          property="twitter:description"
+          content="Experienced front-end developer skilled in building robust web applications."
+        />
+        <meta
+          property="twitter:image"
+          content="https://i.postimg.cc/Sx4TkjqW/devshinn-portforlio.png"
+        />
+      </head>
       <TabProvider>
         <body className={SourceSans3.className}>
           <div className="h-screen">
@@ -56,63 +95,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-const CustomHead = () => {
-  return (
-    <Head>
-      <title>Shinn Thant</title>
-      <meta
-        name="description"
-        content="Shinn Thant is a front end developer building websites and applications you'd love to use"
-      />
-      <meta
-        name="keywords"
-        content="shinn thant, web developer,vscode portfolio, nextjs, shinn thant portfolio, vscode-portfolio"
-      />
-      <meta
-        property="og:description"
-        content="A front-end developer building websites that you'd like to use."
-      />
-      <meta property="og:title" content="Shinn Thant's Portfolio" />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://devshinnthant.vercel.app/" />
-      <meta
-        property="og:description"
-        content="A front-end developer building websites that you'd like to use."
-      />
-      <meta
-        property="og:image"
-        content="https://i.postimg.cc/Sx4TkjqW/devshinn-portforlio.png"
-      />
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta
-        property="twitter:url"
-        content="https://devshinnthant.vercel.app/"
-      />
-      <meta property="twitter:title" content="Shinn Thant | FrontEnd Dev" />
-      <meta
-        property="twitter:description"
-        content="Experienced front-end developer skilled in building robust web applications."
-      />
-      <meta
-        property="twitter:image"
-        content="https://i.postimg.cc/Sx4TkjqW/devshinn-portforlio.png"
-      />
-
-      <meta property="telegram:card" content="summary_large_image" />
-      <meta
-        property="telegram:url"
-        content="https://devshinnthant.vercel.app/"
-      />
-      <meta property="telegram:title" content="Shinn Thant | FrontEnd Dev" />
-      <meta
-        property="telegram:description"
-        content="Experienced front-end developer skilled in building robust web applications."
-      />
-      <meta
-        property="telegram:image"
-        content="https://i.postimg.cc/Sx4TkjqW/devshinn-portforlio.png"
-      />
-    </Head>
-  );
-};
