@@ -102,13 +102,17 @@ export default function Contact() {
               <div className="w-3/4 py-8">
                 <form ref={form} onSubmit={handleSubmit(onSubmit)}>
                   <div className="mb-4">
-                    <label htmlFor="name" className="text-gray-400 text-sm ">
+                    <label
+                      htmlFor="user_name"
+                      className="text-gray-400 text-sm "
+                    >
                       Name
                     </label>
                     <input
                       {...register("user_name")}
                       id="name"
                       type="text"
+                      autoComplete="off"
                       className={cn(
                         "block mt-2 tracking-[1px] px-3 py-2 w-full text-sm text-gray-400 bg-transparent rounded border border-gray-300 appearance-none focus:outline-none focus:ring-0",
                         errors.user_name ? "border-accentColor" : ""
@@ -118,12 +122,17 @@ export default function Contact() {
                   </div>
 
                   <div className="mb-4">
-                    <label htmlFor="email" className="text-gray-400 text-sm ">
+                    <label
+                      htmlFor="user_name"
+                      className="text-gray-400 text-sm "
+                    >
                       Email
                     </label>
                     <input
                       {...register("user_email")}
+                      id="email"
                       type="email"
+                      autoComplete="off"
                       className={cn(
                         "block tracking-[1px] mt-2 px-3 py-2 w-full text-sm text-gray-400 bg-transparent rounded border border-gray-300 appearance-none focus:outline-none focus:ring-0 peer",
                         errors.user_email ? "border-accentColor" : ""
@@ -139,6 +148,7 @@ export default function Contact() {
                     <textarea
                       id="message"
                       {...register("message")}
+                      autoComplete="off"
                       className={cn(
                         "mt-3 block p-3 tracking-[1px] h-20 w-full text-sm bg-transparent rounded-md border text-gray-400 leading-tight border-gray-300 focus:outline-none peer",
                         errors.message ? "border-accentColor" : ""
