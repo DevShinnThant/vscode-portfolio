@@ -1,47 +1,50 @@
 import { projects } from "@/lib/tabs";
-import Image from "next/image";
-
+import Link from "next/link";
 import React from "react";
+import { BsArrowRight } from "react-icons/bs";
 
 export default function Projects() {
   return (
-    <main className="w-full h-full pt-14">
-      <div className="w-3/4 m-auto flex flex-col items-center">
-        <div className="text-[14px] tracking-[0.4px] font-semibold text-accentColor">
-          Showcase
-        </div>
-        <div className="text-3xl mt-4 font-bold tracking-[1px] text-gray-300">
-          Digital design is like painting,
-        </div>
-        <div className="text-3xl mt-1 font-bold tracking-[1px] text-gray-300">
-          the paint never dries.
-        </div>
+    <main className="w-full h-full pt-16">
+      <div className="w-fit border-b border-accentColor text-accentColor mb-10 m-auto text-2xl font-semibold tracking-[1px]">
+        Projects
       </div>
-
-      <div className="grid md:grid-cols-12 py-28 px-12 gap-14">
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            className="col-span-4 group hover:bg-accentColor cursor-pointer h-[274px] sm:h-[300px] bg-gray-300 rounded-lg flex flex-col transition-all"
-          >
-            <Image
-              loading="lazy"
-              width={500}
-              height={60}
-              src={project.image}
-              alt={project.title}
-              className="rounded-t-lg aspect-square sm:aspect-auto w-full h-44 object-center group-hover:contrast-125"
-            />
-            <div className="flex   flex-col items-start p-3">
-              <div className="text-lg group-hover:text-white group-hover:font-bold font-semibold text-black">
+      <div className="grid place-content-center">
+        <div className="grid cards group grid-cols-12 gap-6 pointer-events-none">
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className="cursor-pointer  card w-[240px] h-[200px] p-4 bg-main border hover:border-accentColor border-gray-400 rounded-sm hover:shadow-md col-span-4 translate-y-2 rotate-[4deg] transition-all hover:translate-y-0 hover:rotate-0 transform scale-[1] opacity-100 hover:scale-[1.15] hover:z-10 pointer-events-auto flex flex-col"
+            >
+              <img
+                className="object-contain w-[60px] h-[30px]"
+                width={60}
+                height={30}
+                alt={project.title}
+                src={project.image}
+              />
+              <div className="text-xs mt-3 tracking-[1px] title text-gray-300 font-semibold">
                 {project.title}
               </div>
-              <div className="text-sm group-hover:text-gray-300 text-gray-500">
+              <div className="mt-2 text-[10px] tracking-[1px] text-gray-400 font-normal">
                 {project.description}
               </div>
+              <div className="flex justify-end">
+                <div
+                  aria-label={`Navigate the ${project.title} project.`}
+                  className="group w-2/4 cursor-not-allowed transition-all hover:bg-accentColor border border-accentColor px-2 py-1 rounded-sm shadow-md mt-4"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="text-[10px] group-hover:text-white tracking-[1px] font-normal text-white">
+                      View Project
+                    </div>
+                    <BsArrowRight size={12} color="white" />
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </main>
   );

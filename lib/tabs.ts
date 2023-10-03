@@ -94,7 +94,7 @@ export const themeItems: ThemeItemType[] = [
     icon: "/dracula.png",
   },
   {
-    label: "Auy Dark",
+    label: "Ayu Dark",
     value: "ayu-dark",
     icon: "/ayu.png",
   },
@@ -164,31 +164,47 @@ export const projects = [
     title: "The Beast Fitness",
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maximetenetur facere excepturi.",
-    image: "/thebeast-dashboard.png",
+    image: "/thebeast.svg",
     link: "/",
   },
-  // {
-  //   id: 2,
-  //   title: "Pocket Nicotine",
-  //   description:
-  //     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maximetenetur facere excepturi.",
-  //   image: "/poc-dashboard.png",
-  //   link: "/",
-  // },
+  {
+    id: 2,
+    title: "Pocket Nicotine",
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maximetenetur facere excepturi.",
+    image: "/pocketnicotine-logo.png",
+    link: "/",
+  },
   {
     id: 3,
     title: "App Studio",
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maximetenetur facere excepturi.",
-    image: "/appstudio-dashboard.png",
+    image: "/app-studio.png",
     link: "/",
   },
   {
     id: 4,
+    title: "Vscode Portfolio",
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maximetenetur facere excepturi.",
+    image: "/vscode_icon.svg",
+    link: "/",
+  },
+  {
+    id: 5,
+    title: "MUI Dashboard",
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maximetenetur facere excepturi.",
+    image: "/nord.png",
+    link: "/",
+  },
+  {
+    id: 6,
     title: "Crown Clothing",
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maximetenetur facere excepturi.",
-    image: "/crown-clothing.png",
+    image: "/nord.png",
     link: "/",
   },
 ];

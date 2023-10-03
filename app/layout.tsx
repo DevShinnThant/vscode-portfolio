@@ -2,7 +2,6 @@ import "tailwindcss/tailwind.css";
 import "./globals.css";
 
 // Utils
-import type { Metadata } from "next";
 import { Source_Sans_3 } from "next/font/google";
 
 // Provider
@@ -17,11 +16,6 @@ import Header from "../components/header/Header";
 
 const SourceSans3 = Source_Sans_3({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Vscode Portfolio",
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -31,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <title>Shinn Thant</title>
-
+        <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
           content="Shinn Thant is a front end developer building websites and applications you'd love to use"
@@ -70,14 +64,14 @@ export default function RootLayout({
           content="https://i.postimg.cc/Hsnt6QL7/Screenshot-2023-10-03-at-4-16-25-PM.png"
         />
       </head>
-      <TabProvider>
-        <body className={SourceSans3.className}>
-          <div className="h-screen">
-            <div className="h-full flex flex-col">
-              <Header />
 
-              <div className="flex h-[calc(100%_-_17px_-_38px)]">
-                <Sidebar />
+      <body className={SourceSans3.className}>
+        <div className="h-screen">
+          <div className="h-full flex flex-col">
+            <Header />
+            <div className="flex h-[calc(100%_-_17px_-_38px)]">
+              <Sidebar />
+              <TabProvider>
                 <Explorer />
                 <div className="max-width flex flex-col">
                   <TabBar />
@@ -85,12 +79,12 @@ export default function RootLayout({
                     {children}
                   </div>
                 </div>
-              </div>
-              <BottomBar />
+              </TabProvider>
             </div>
+            <BottomBar />
           </div>
-        </body>
-      </TabProvider>
+        </div>
+      </body>
     </html>
   );
 }
