@@ -53,7 +53,7 @@ export default function RootLayout({
         />
         <meta
           property="og:image"
-          content="https://i.postimg.cc/Sx4TkjqW/devshinn-portforlio.png"
+          content="https://i.postimg.cc/Hsnt6QL7/Screenshot-2023-10-03-at-4-16-25-PM.png"
         />
         <meta property="twitter:card" content="summary_large_image" />
         <meta
@@ -67,7 +67,7 @@ export default function RootLayout({
         />
         <meta
           property="twitter:image"
-          content="https://i.postimg.cc/Sx4TkjqW/devshinn-portforlio.png"
+          content="https://i.postimg.cc/Hsnt6QL7/Screenshot-2023-10-03-at-4-16-25-PM.png"
         />
       </head>
       <TabProvider>
