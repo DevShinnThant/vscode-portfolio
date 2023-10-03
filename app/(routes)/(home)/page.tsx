@@ -1,5 +1,4 @@
-import BgImage from "@/public/Novelist writing-bro.svg";
-import Image from "next/image";
+import HomeLottie from "@/components/lottie/HomeLottie";
 
 export default function Home() {
   return (
@@ -30,14 +29,8 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <div className="flex justify-center pl-12 w-full h-full">
-        <Image
-          className="text-white"
-          width={320}
-          height={300}
-          src={BgImage}
-          alt="Image"
-        />
+      <div className="flex justify-center items-center pl-12 w-full h-full">
+        <HomeLottie />
       </div>
     </main>
   );
