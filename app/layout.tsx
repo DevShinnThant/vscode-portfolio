@@ -32,6 +32,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <title>Shinn Thant</title>
+
         <meta
           name="description"
           content="Shinn Thant is a front end developer building websites and applications you'd love to use"

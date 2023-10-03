@@ -117,29 +117,44 @@ export const themeItems: ThemeItemType[] = [
 
 export const explorerItems = [
   {
-    name: "index.tsx",
-    path: "/",
-    icon: "/ts.svg",
-  },
-  {
-    name: "about.js",
-    path: "/about",
-    icon: "/js_icon.svg",
-  },
-  {
     name: "contact.html",
     path: "/contact",
     icon: "/html_icon.svg",
+    hasChildren: false,
   },
   {
-    name: "projects.tsx",
-    path: "/projects",
-    icon: "/ts.svg",
+    name: "TypeScript",
+    icon: "/ts-folder.svg",
+    hasChildren: true,
+    children: [
+      {
+        name: "index.tsx",
+        path: "/",
+        icon: "/ts.svg",
+      },
+      {
+        name: "projects.tsx",
+        path: "/projects",
+        icon: "/ts.svg",
+      },
+      {
+        name: "github.ts",
+        path: "/github",
+        icon: "/ts.svg",
+      },
+    ],
   },
   {
-    name: "github.ts",
-    path: "/github",
-    icon: "/ts.svg",
+    name: "JavaScript",
+    icon: "/js-folder.svg",
+    hasChildren: true,
+    children: [
+      {
+        name: "about.js",
+        path: "/about",
+        icon: "/js_icon.svg",
+      },
+    ],
   },
 ];
 
