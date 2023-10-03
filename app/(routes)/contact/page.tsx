@@ -210,18 +210,20 @@ export default function Contact() {
               </div>
 
               <div className="mt-8 flex items-center gap-4">
-                <Link
-                  aria-label="Navigate to shinnthant's facebook profile"
-                  href="/facebook.com/Shinn Thant"
+                <div
+                  // aria-label="Navigate to shinnthant's facebook profile"
+
+                  className="cursor-not-allowed"
                 >
                   <BsFacebook color="white" />
-                </Link>
-                <Link
-                  aria-label="Navigate to shinnthant's instagram profile"
-                  href="/instagram.com/Shinn Thant Jr"
+                </div>
+                <div
+                  className="cursor-not-allowed"
+                  // aria-label="Navigate to shinnthant's instagram profile"
+                  // href="/"
                 >
                   <BsInstagram color="white" />
-                </Link>
+                </div>
                 <Link
                   aria-label="Navigate to shinnthant's linkedin profile"
                   href="https://www.linkedin.com/in/shinn-thant-b90533231/"

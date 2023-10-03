@@ -34,10 +34,6 @@ export default function Explorer() {
     }
   };
 
-  useEffect(() => {
-    console.log(openedItem);
-  }, [openedItem]);
-
   return (
     <div className="w-[18vw] select-none h-full text-slate-300 bg-explorer border-r border-explorerBorder flex flex-col py-[0.5rem] px-[0.75rem]">
       <div className="font-normal mt-2 mb-6 uppercase text-[0.8rem] leading-[1px] ">
