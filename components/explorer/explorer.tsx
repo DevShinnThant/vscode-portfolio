@@ -19,7 +19,10 @@ import { useRouter } from "next/navigation";
 export default function Explorer() {
   const [opened, setOpened] = useState<boolean>(true);
 
-  const [openedItem, setOpenedItem] = useState<string[]>([]);
+  const [openedItem, setOpenedItem] = useState<string[]>([
+    "TypeScript",
+    "JavaScript",
+  ]);
 
   const router = useRouter();
 

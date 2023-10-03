@@ -21,7 +21,6 @@ export default function About() {
         <div className="text-gray-500 text-[14px] leading-[1px] p-[10px]">
           About {"/>"}
         </div>
-        {/* <div className="absolute left-[40px] bg-gray-500 w-[1px]  bottom-0" /> */}
         <div className="mt-[20px] flex flex-col items-start">
           <Code>
             <div className="lineNumberCode mr-5 mt-[4px] pr-[10px]">01.</div>

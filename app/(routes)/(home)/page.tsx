@@ -1,10 +1,11 @@
 import HomeLottie from "@/components/lottie/HomeLottie";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="w-full h-full flex items-center">
       <div className="flex justify-center items-center w-full h-full">
-        <div className="w-[500px] h-[500px] flex flex-col justify-center items-start">
+        <div className="w-[500px] pl-4 h-[500px] flex flex-col justify-center items-start">
           <p className="text-accentColor font-semibold text-[14px]">
             Hello, my name is
           </p>
@@ -24,9 +25,14 @@ export default function Home() {
           <p className="mt-[6px] text-[14px] text-gray-500">
             I enjoy learning new skills and implementing them in real life.
           </p>
-          <button className="mt-[50px] rounded-sm border-2 border-accentColor w-[120px] h-[30px] flex justify-center items-center bg-transparent p-[20px] cursor-pointer">
-            <p className="text-sm text-accentColor">Get In Touch</p>
-          </button>
+          <Link
+            href="/contact"
+            className="transition-all mt-[50px] group hover:bg-accentColor rounded-sm border-2 border-accentColor w-[120px] h-[30px] flex justify-center items-center bg-transparent p-[20px] cursor-pointer"
+          >
+            <div className="text-sm group-hover:text-white text-accentColor">
+              Get In Touch
+            </div>
+          </Link>
         </div>
       </div>
       <div className="flex justify-center items-center pl-12 w-full h-full">

@@ -164,47 +164,31 @@ export const projects = [
     title: "The Beast Fitness",
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maximetenetur facere excepturi.",
-    image: "/thebeast.svg",
+    image: "/thebeast-dashboard.png",
     link: "/",
   },
-  {
-    id: 2,
-    title: "Pocket Nicotine",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maximetenetur facere excepturi.",
-    image: "/pocketnicotine-logo.png",
-    link: "/",
-  },
+  // {
+  //   id: 2,
+  //   title: "Pocket Nicotine",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maximetenetur facere excepturi.",
+  //   image: "/poc-dashboard.png",
+  //   link: "/",
+  // },
   {
     id: 3,
     title: "App Studio",
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maximetenetur facere excepturi.",
-    image: "/app-studio.png",
+    image: "/appstudio-dashboard.png",
     link: "/",
   },
   {
     id: 4,
-    title: "Vscode Portfolio",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maximetenetur facere excepturi.",
-    image: "/vscode_icon.svg",
-    link: "/",
-  },
-  {
-    id: 5,
-    title: "MUI Dashboard",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maximetenetur facere excepturi.",
-    image: "/nord.png",
-    link: "/",
-  },
-  {
-    id: 6,
     title: "Crown Clothing",
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maximetenetur facere excepturi.",
-    image: "/nord.png",
+    image: "/crown-clothing.png",
     link: "/",
   },
 ];

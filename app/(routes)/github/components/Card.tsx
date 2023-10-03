@@ -65,7 +65,7 @@ const Card = ({ name, description, repoType, star, tech, watcher }: Props) => {
         <Link
           target="_blank"
           href={`https://github.com/ShinnTNT/${name}`}
-          className="flex shadow-md bg-accentColor rounded-lg px-[8px] py-[1px] items-center "
+          className="flex shadow-md bg-accentColor backdrop-contrast-200 rounded-lg px-[8px] py-[1px] items-center "
         >
           <div className="text-[10px] font-semibold tracking-[0.6px] text-white">
             Github
