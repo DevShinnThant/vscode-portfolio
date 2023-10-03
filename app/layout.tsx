@@ -4,7 +4,6 @@ import "./globals.css";
 // Utils
 import type { Metadata } from "next";
 import { Source_Sans_3 } from "next/font/google";
-import Head from "next/head";
 
 // Provider
 import { TabProvider } from "../lib/store/client/TabContext";

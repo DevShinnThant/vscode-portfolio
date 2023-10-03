@@ -5,25 +5,6 @@
 /* Theme */
 @layer base {
   html {
-    --main-bg: #24292e;
-    --bg-text: rgba(56, 58, 61, 0.35);
-    --text-color: #efefef;
-    --accent-color: #f9826c;
-    --titlebar-bg: #1f2428;
-    --sidebar-bg: #24292e;
-    --sidebar-hover-bg: #1f2428;
-    --explorer-bg: #1f2428;
-    --explorer-hover-bg: #24292e;
-    --explorer-border: #161a1d;
-    --tabs-bg: #1f2428;
-    --tab-bg: #1f2428;
-    --tab-active-bg: #24292e;
-    --tab-border: #24292e;
-    --bottombar-bg: #24292e;
-    --bottombar-border: #1b1f23;
-  }
-
-  html[theme="dracula"] {
     --main-bg: #282a36;
     --bg-text: #313340;
     --text-color: #efefef;
@@ -40,6 +21,25 @@
     --tab-border: #191a21;
     --bottombar-bg: #191a21;
     --bottombar-border: #191a21;
+  }
+
+  html[theme="github-dark"] {
+    --main-bg: #24292e;
+    --bg-text: rgba(56, 58, 61, 0.35);
+    --text-color: #efefef;
+    --accent-color: #f9826c;
+    --titlebar-bg: #1f2428;
+    --sidebar-bg: #24292e;
+    --sidebar-hover-bg: #1f2428;
+    --explorer-bg: #1f2428;
+    --explorer-hover-bg: #24292e;
+    --explorer-border: #161a1d;
+    --tabs-bg: #1f2428;
+    --tab-bg: #1f2428;
+    --tab-active-bg: #24292e;
+    --tab-border: #24292e;
+    --bottombar-bg: #24292e;
+    --bottombar-border: #1b1f23;
   }
 
   html[theme="ayu-dark"] {

@@ -8,7 +8,7 @@ export interface ThemeSlice {
 }
 
 export const createThemeSlice: StateCreator<ThemeSlice> = (set) => ({
-  theme: "github-dark",
+  theme: "dracula",
   setTheme: (theme: string) => {
     document.documentElement.setAttribute("theme", theme);
     localStorage.setItem("theme", theme);
