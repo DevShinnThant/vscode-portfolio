@@ -33,11 +33,19 @@ const Card = ({ name, description, repoType, star, tech, watcher }: Props) => {
       <div className="w-full flex items-center justify-between gap-4">
         <div className="flex gap-3 items-center">
           {tech ? (
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-2">
               <div
                 className={cn(
                   "w-3 h-3 rounded-full",
-                  `${getRepoTechColor(tech)}`
+                  tech === "JavaScript"
+                    ? "bg-yellow-300"
+                    : tech === "Vue"
+                    ? "bg-green-500"
+                    : tech === "TypeScript"
+                    ? "bg-blue-600"
+                    : tech === "HTML"
+                    ? "bg-orange-600"
+                    : ""
                 )}
               />
               <div className="text-gray-400 text-[12px]">{tech}</div>
@@ -46,12 +54,12 @@ const Card = ({ name, description, repoType, star, tech, watcher }: Props) => {
 
           <div className="flex items-center gap-3">
             <FiStar size={13} color="white" />
-            <div className="text-gray-400">{star}</div>
+            <div className="text-gray-400 text-[14px]">{star}</div>
           </div>
 
           <div className="flex items-center gap-3">
             <FiEye size={13} color="white" />
-            <div className="text-gray-400">{watcher}</div>
+            <div className="text-gray-400 text-[14px]">{watcher}</div>
           </div>
         </div>
         <Link

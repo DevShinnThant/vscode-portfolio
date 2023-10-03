@@ -1,3 +1,5 @@
+let portfolio;
+
 const DefaultHeader = () => {
   return (
     <div className="w-full over h-[30px] bg-title px-[0.5rem] flex items-center justify-center text-white text-[0.85rem] border-b border-b-[#191d20]">
@@ -5,7 +7,7 @@ const DefaultHeader = () => {
         {/* Left */}
         <div className="flex items-center">
           <img width={20} height={20} src="/vscode_icon.svg" alt="vscode" />
-          <div className="ml-6 flex items-center gap-4 cursor-pointer">
+          <div className="ml-6 cursor-not-allowed flex items-center gap-4">
             <div>File</div>
             <div>Edit</div>
             <div>View</div>

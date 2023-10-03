@@ -30,10 +30,10 @@ export default function Projects() {
                 {project.description}
               </div>
               <div className="flex justify-end">
-                <Link
-                  aria-label={`Navigate the ${project.title} project.`}
-                  href={project.link}
-                  className="group w-2/4 transition-all hover:bg-accentColor border border-accentColor px-2 py-1 rounded-sm shadow-md mt-4"
+                <div
+                  // aria-label={`Navigate the ${project.title} project.`}
+                  // href={project.link}
+                  className="group cursor-not-allowed w-2/4 transition-all hover:bg-accentColor border border-accentColor px-2 py-1 rounded-sm shadow-md mt-4"
                 >
                   <div className="flex items-center justify-between">
                     <div className="text-[10px] group-hover:text-white tracking-[1px] font-normal text-white">
@@ -41,7 +41,7 @@ export default function Projects() {
                     </div>
                     <BsArrowRight size={12} color="white" />
                   </div>
-                </Link>
+                </div>
               </div>
             </div>
           ))}

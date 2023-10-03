@@ -14,7 +14,7 @@ export interface TabType {
 
 export const tabs: TabType[] = [
   {
-    icon: "/react_icon.svg",
+    icon: "/ts.svg",
     name: "index.tsx",
     path: "/",
   },
@@ -39,8 +39,8 @@ export const tabs: TabType[] = [
     path: "/articles",
   },
   {
-    icon: "/markdown_icon.svg",
-    name: "README.md",
+    icon: "/ts.svg",
+    name: "README.ts",
     path: "/github",
   },
 ];
@@ -119,7 +119,7 @@ export const explorerItems = [
   {
     name: "index.tsx",
     path: "/",
-    icon: "/react_icon.svg",
+    icon: "/ts.svg",
   },
   {
     name: "about.js",
@@ -134,12 +134,12 @@ export const explorerItems = [
   {
     name: "projects.tsx",
     path: "/projects",
-    icon: "/react_icon.svg",
+    icon: "/ts.svg",
   },
   {
-    name: "github.md",
+    name: "github.ts",
     path: "/github",
-    icon: "/markdown_icon.svg",
+    icon: "/ts.svg",
   },
 ];
 
@@ -149,8 +149,8 @@ export const projects = [
     title: "The Beast Fitness",
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maximetenetur facere excepturi.",
-    image: "/nord.png",
-    link: "/thebeast.svg",
+    image: "/thebeast.svg",
+    link: "/",
   },
   {
     id: 2,
@@ -173,7 +173,7 @@ export const projects = [
     title: "Vscode Portfolio",
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maximetenetur facere excepturi.",
-    image: "/nord.png",
+    image: "/vscode_icon.svg",
     link: "/",
   },
   {

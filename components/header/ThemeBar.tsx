@@ -44,6 +44,7 @@ export default function ThemeBar() {
         <div className="fixed top-[50px] z-10 w-[580px] h-[200px] bg-title flex flex-col gap-[8px] rounded-[4px] p-[10px]">
           {themeList.map((item) => (
             <div
+              key={item.label}
               onClick={() => handleChangeTheme(item.value)}
               className={cn(
                 "h-[24px] cursor-pointer flex items-center px-[8px] rounded-[4px]",

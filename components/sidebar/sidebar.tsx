@@ -23,7 +23,7 @@ export default function Sidebar() {
 
   return (
     <aside className="min-w-[50px] h-full bg-sidebar flex flex-col justify-between">
-      <div className="pt-[10px] w-full h-[300px] flex flex-col gap-2 justify-center items-center">
+      <div className="w-full h-[300px] flex flex-col gap-2 pt-4 justify-start items-center">
         {sidebarTopItems.map(({ Icon, path }) => (
           <Link aria-label={`Navigate the ${path} page`} href={path} key={path}>
             <div
