@@ -86,7 +86,6 @@ export default function RootLayout({
                   </div>
                 </div>
               </div>
-
               <BottomBar />
             </div>
           </div>
