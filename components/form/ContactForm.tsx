@@ -7,16 +7,12 @@ import { ToastContainer, toast } from "react-toastify";
 
 // Form Stuff
 import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
+import { zodResolver } from "@hookform/resolvers/zod";
+
 import { useRef, useState } from "react";
 import { cn } from "@/lib/utils";
-
-const schema = yup.object({
-  user_name: yup.string().required(),
-  user_email: yup.string().email().required(),
-  message: yup.string().required(),
-});
+import { contactSchemaType } from "@/lib/validation/contact/type";
+import { contactFormSchema } from "@/lib/validation/contact/schema";
 
 export default function ContactForm() {
   const form = useRef<HTMLFormElement>(null);
@@ -26,8 +22,8 @@ export default function ContactForm() {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm({
-    resolver: yupResolver(schema),
+  } = useForm<contactSchemaType>({
+    resolver: zodResolver(contactFormSchema),
   });
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
