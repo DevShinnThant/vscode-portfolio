@@ -6,13 +6,18 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 
 // Form Stuff
+import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { useRef, useState } from "react";
 import { cn } from "@/lib/utils";
-import { contactSchemaType } from "@/lib/validation/contact/type";
-import { contactFormSchema } from "@/lib/validation/contact/schema";
+
+const schema = z.object({
+  user_name: z.string(),
+  user_email: z.string().email(),
+  message: z.string(),
+});
 
 export default function ContactForm() {
   const form = useRef<HTMLFormElement>(null);
@@ -22,8 +27,8 @@ export default function ContactForm() {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm<contactSchemaType>({
-    resolver: zodResolver(contactFormSchema),
+  } = useForm<z.infer<typeof schema>>({
+    resolver: zodResolver(schema),
   });
 
   const [isLoading, setIsLoading] = useState<boolean>(false);

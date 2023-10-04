@@ -1,14 +1,13 @@
 import React from "react";
 import CardGrid from "../components/CardGrid";
 import Card from "../components/Card";
-import { parsedEnv } from "@/lib/validation/env";
 
 async function fetchRepo(slug: string) {
   const response = await fetch(
     `https://api.github.com/search/repositories?q=${slug}+user:ShinnTNT`,
     {
       headers: {
-        Authorization: `token ${parsedEnv.GITHUB_TOKEN}`,
+        Authorization: `token ${process.env.GITHUB_TOKEN}`,
       },
     }
   );
