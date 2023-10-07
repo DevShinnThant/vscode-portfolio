@@ -13,7 +13,8 @@ import Explorer from "../components/explorer/explorer";
 import TabBar from "../components/tab-bar/tabBar";
 import BottomBar from "../components/bottom-bar/bottomBar";
 import Header from "../components/header/Header";
-import GoogleAnalytics from "@/components/google-analytic/GoogleAnalytic";
+
+import { Analytics } from "@vercel/analytics/react";
 
 const SourceSans3 = Source_Sans_3({ subsets: ["latin"] });
 
@@ -80,9 +81,7 @@ export default function RootLayout({
       </head>
 
       <body className={SourceSans3.className}>
-        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
-          <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
-        ) : null}
+        <Analytics />
         <div className="h-screen">
           <div className="h-full flex flex-col">
             <Header />
