@@ -53,7 +53,7 @@ export default function About() {
           <Code>
             <div className="lineNumberCode mr-5 mt-[4px] pr-[10px]">04.</div>
             <div className="ml-[10px] flex items-center">
-              <div className="declareCode mt-[4px] mr-[14px]">contructor</div>
+              <div className="declareCode mt-[4px] mr-[14px]">constructor</div>
               <div className="methodCode mt-[4px]">
                 {`(`}&#160;{")"} &#160;&#160; {"{"}
               </div>
@@ -161,8 +161,8 @@ export default function About() {
             <div className="ml-[10px] flex items-center">
               <div className="slash mt-[4px] mr-[10px]">······</div>
               <div className="methodCodeLight mt-[4px]">
-                {"{"} '2023 January - now' : 'Front-End Developer at Xsphere'{" "}
-                {"}"}
+                {"{"} '2023 January - now' : 'Senior Front-End Developer at
+                Xsphere' {"}"}
               </div>
             </div>
           </Code>
@@ -200,14 +200,6 @@ export default function About() {
               <div className="slash mt-[4px] mr-[10px]">····</div>
               <div className="declareCode mt-[4px] mr-[14px]">return</div>
               <div className="methodCode mt-[4px]">{"["}</div>
-            </div>
-          </Code>
-
-          <Code>
-            <div className="lineNumberCode mr-5 mt-[4px] pr-[10px]">13.</div>
-            <div className="ml-[10px] flex items-center">
-              <div className="slash mt-[4px] mr-[10px]">····</div>
-              <div className="methodCode mt-[4px]">{"]"}</div>
             </div>
           </Code>
 
@@ -252,6 +244,14 @@ export default function About() {
           </Code>
 
           <Code>
+            <div className="lineNumberCode mr-5 mt-[4px] pr-[10px]">13.</div>
+            <div className="ml-[10px] flex items-center">
+              <div className="slash mt-[4px] mr-[10px]">····</div>
+              <div className="methodCode mt-[4px]">{"]"}</div>
+            </div>
+          </Code>
+
+          <Code>
             <div className="lineNumberCode mr-5 mt-[4px] pr-[10px]">14.</div>
             <div className="ml-[10px] flex items-center">
               <div className="slash mt-[4px] mr-[10px]">··</div>
@@ -277,7 +277,7 @@ export default function About() {
               <div className="declareCode mt-[4px] mr-[14px]">return</div>
               <div className="methodCode mt-[4px]">
                 {"["}
-                &#160;'&#160;HTML&#160;'&#160;,&#160;'&#160;CSS&#160;'&#160;,&#160;'&#160;JS&#160;&#160;'&#160;,&#160;'&#160;TypeScript&#160;&#160;'&#160;,&#160;'&#160;ReactJS&#160;&#160;'&#160;,&#160;&#160;'&#160;NextJS&#160;&#160;'&#160;,&#160;'&#160;React
+                '&#160;TypeScript&#160;&#160;'&#160;,&#160;'&#160;ReactJS&#160;&#160;'&#160;,&#160;&#160;'&#160;NextJS&#160;&#160;'&#160;,&#160;'&#160;React
                 Query&#160;&#160;'&#160;,&#160;'&#160;Redux&#160;'&#160;
                 {"]"}
               </div>

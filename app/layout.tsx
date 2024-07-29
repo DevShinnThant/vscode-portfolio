@@ -56,6 +56,7 @@ export default function RootLayout({
         <meta property="og:title" content="Shinn Thant's Portfolio" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://devshinnthant.vercel.app/" />
+
         <meta
           property="og:description"
           content="A front-end developer building websites that you'd like to use."
